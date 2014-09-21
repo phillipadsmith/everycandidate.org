@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Every Candidate
+tagline:          "More than just the Mayor's race"
+description:      'EveryCandidate description'
+url:              http://everycandidate.org
+baseurl:          '/'
+paginate:         5
+
+author:
+  name:           'Every Candidate'
+  url:            https://twitter.com/EveryCandidate
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/phillipadsmith/everycandidate.org/
