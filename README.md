@@ -1,7 +1,7 @@
 Every Candidate
 ================
 
-![Every Candidate logo by the fine people at ethicalux.com](/phillipadsmith/everycandidate.org/blob/master/public/img/everycandidate_colour_logo.png "Every Candidate")
+![Every Candidate logo by the fine people at ethicalux.com](/blob/master/public/img/everycandidate_colour_logo.png "Every Candidate")
 
 Every Candidate is a project that aims to chronical municipal elections in new an interesting ways. The project will start with Toronto's upcoming election on October 27th, 2014.
 
