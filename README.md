@@ -3,11 +3,11 @@ Every Candidate
 
 ![Every Candidate logo by the fine people at ethicalux.com](/public/img/everycandidate_colour_logo.png "Every Candidate")
 
-Every Candidate is a project that aims to chronical municipal elections in new an interesting ways. The project will start with Toronto's upcoming election on October 27th, 2014.
+Every Candidate is a project that aims to chronical municipal elections in new an interesting ways. The project will start with Toronto's upcoming election on October 27, 2014.
 
 This repository contains the code that runs the public-facing [EveryCandidate.org](http://everycandidate.org) web site. It also contains any of the data that has been aquired and cleaned in the process.
 
-This is very much a "minimum viable product" at the moment. Things should get more interesting ([especially if you contribute](#pitching-in)). 
+This is very much a "minimum-viable product" at the moment. Things should get more interesting ([especially if you contribute](#pitching-in)). 
 
 If you'd like to contact me directly, you can do so [here](https://twitter.com/everycandidate) or [here](https://twitter.com/phillipadsmith). 
 
