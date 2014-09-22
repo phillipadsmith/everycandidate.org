@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-Every Candidate is a wildly aspirational project to explore what the 485 individuals running for the position of councillor or school trustee in Toronto's upcoming municipal election tell us about city they seek to represent. Who are they? What is their  background? What does their campaign material have to say? What do public records reveal?
+Every Candidate is a wildly aspirational project to explore what the 485 individuals running for the position of councillor or school trustee in Toronto's upcoming municipal election tell us about the city they seek to represent. Who are they? What is their background? What does their campaign material have to say? What do public records reveal?
 
 There are all kinds of questions that this project aspires to answer -- some quirky, some hopelessly esoteric -- but, at the same time, we hope that this project asks questions that also interest you, as a resident of Toronto. Whether you are a concerned citizen or a parent, Every Candidate hopes that we can help play a small part in your election-day research.
 
@@ -31,7 +31,7 @@ You can also subscribe for updates as they are published [here](http://eepurl.co
 
 <h2 id="contributors">Contributors</h2>
 
-People who've [helped out](/get-involved) by sending us tips, information, or flyers:
+People have [helped out](/get-involved) by sending us tips, information, or flyers:
 
 * Your Name Here! [Find out how you can help](/get-involved).
 * Thanks to Carol for our first contribution of missing information for [Balachandran, Niranjan](http://everycandidate.org/toronto-city-council/niranjan-balachandran-1998/)
