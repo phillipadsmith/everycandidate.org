@@ -34,3 +34,4 @@ You can also subscribe for updates as they are published [here](http://eepurl.co
 People who've [helped out](/get-involved) by sending us tips, information, or flyers:
 
 * Your Name Here! [Find out how you can help](/get-involved).
+* Thanks to Carol for our first contribution of missing information for [Balachandran, Niranjan](http://everycandidate.org/toronto-city-council/niranjan-balachandran-1998/)
