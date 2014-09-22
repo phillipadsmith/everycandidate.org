@@ -11,7 +11,7 @@ For more information, [read our launch September 22nd, 2014 launch announcement]
 
 <h2 id="team">Team</h2>
 
-[Tim Groves](https://twitter.com/timymit) is a Toronto-based investigative researcher and reporter whose work has been published in the Guardian, the Toronto Star, and on CBC. 
+[Tim Groves](https://twitter.com/timmgroves) is a Toronto-based investigative researcher and reporter whose work has been published in the Guardian, the Toronto Star, and on CBC. 
 
 [Phillip Smith](https://twitter.com/phillipadsmith) is a Toronto-loving muckraker who has a passion for open data and local politics.
 
