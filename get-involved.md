@@ -7,9 +7,9 @@ On the off-chance that it has not been said enough, there is a very, very small 
 
 Here are some simple ways you can get involved today (more will be added in the coming days):
 
-* **Review the candidate data and fill in the gaps**: no web site for a candidate, give them a call and ask about it. Then <a href="mailto:everycandidate@gmail.org">drop us a note</a>.
+* **Review the candidate data and fill in the gaps**: no web site for a candidate? Give them a call and ask about it! Then <a href="mailto:everycandidate@gmail.org">drop us a note</a>.
 
-* **Send us a candidate's campaign flyer**: More will be posted about this soon, but -- in summary -- before throwing out those campaign flyers, take a quick snapshot with your phone or camera (front & back please!) and <a href="mailto:everycandidate.org">send them to us</a>.
+* **Send us a candidate's campaign flyer**: More will be posted about this soon, but -- in summary -- before throwing out those campaign flyers, take a quick snapshot with your phone or camera (front & back please!) and <a href="mailto:everycandidate@gmail.org">send them to us</a>.
 
 * **Let us know about all-candidates debates in your ward**: If you know of an upcoming all-candidates debate in your ward, please <a href="mailto:everycandidate@gmail.org">drop us a note</a>. 
 
