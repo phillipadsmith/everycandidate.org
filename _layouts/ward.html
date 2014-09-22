@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="ward">
+    <h1>{{ page.title }} (Ward&nbsp;{{ page.wid }})</h1>
+    {% if content != '' %}
+    {{ content }}
+    {% else %}
+    <p>It doesn't look like there's a write-up yet for this ward. Can you write one? If so, please <a href="mailto:{{ site.author.email }}">get in touch.</a></p>
+    {% endif %}
+    <h2>Candidates for Toronto city countil</h2>
+    <ul>
+{% assign candidates = site.data.toronto_council | sort: 'sortby' %}
+{% for candidate in candidates %}
+{% if candidate.ward == page.wid %}
+<li><a title="Information on Toronto ward {{ page.wid }} city council candidate {{ candidate.name_full }}" href="/toronto-city-council/{{ candidate.slug }}">{{ candidate.name_full }}</a> {% if candidate.incumbent == 'yes' %}(Incumbent){% endif %}</li>
+{% endif %}
+{% endfor %}
+    </ul>
+</div>

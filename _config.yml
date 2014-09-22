@@ -6,9 +6,9 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Every Candidate
-tagline:          "More than just the Mayor's race"
-description:      'EveryCandidate description'
+title:            "Every Candidate"
+tagline:          "More than just the race for mayor"
+description:      'Every Candidate: More than just the race for mayor'
 url:              http://everycandidate.org
 baseurl:          '/'
 paginate:         5
@@ -16,9 +16,21 @@ paginate:         5
 author:
   name:           'Every Candidate'
   url:            https://twitter.com/EveryCandidate
+  email:          'everycandidate@gmail.com'
 
 # Custom vars
 version:          1.0.0
 
 github:
   repo:           https://github.com/phillipadsmith/everycandidate.org/
+
+# Collections
+collections:
+  toronto_city_council:
+    output: true
+  toronto_school_board:
+    output: true
+  toronto_wards:
+    output: true
+  toronto_school_wards:
+    output: true
