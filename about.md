@@ -17,6 +17,8 @@ For more information, [read our launch September 22nd, 2014 launch announcement]
 
 The Every Candidate logo was developed by the fine folks at [Ethical UX](http://ethicalux.com/).
 
+The image used when you share Every Candidate on Facebook was taken by [Johnathan Nightingale on Flickr](https://www.flickr.com/photos/johnath/6876795286/in/photolist-dkJyJo-Kx33L-bF7TSB-a1tTAu-9zDhKF-oncwQ-btFnDY-7dEjM).
+
 (If you can lend a hand, we would like to <a href="mailto:everycandidate@gmail.com">hear from you</a>.)
 
 <h2 id="contact">Contact</h2>
