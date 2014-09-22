@@ -23,7 +23,7 @@ The image used when you share Every Candidate on Facebook was taken by [Johnatha
 
 <h2 id="contact">Contact</h2>
 
-The easiest way to contact the project is to drop us an e-mail <a href="mailto:everycandidate.org">here</a>. We'll get back to you ASAP.
+The easiest way to contact the project is to drop us an e-mail <a href="mailto:everycandidate@gmail.com">here</a>. We'll get back to you ASAP.
 
 Otherwise, you can send us a 140 character note on [Twitter](https://twitter.com/EveryCandidate).
 
