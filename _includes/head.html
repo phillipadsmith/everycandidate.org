@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <!-- General properties -->
     <meta name="description" content="{{ site.description }}" />
-    <meta name="author" content="{{ site.author }}">
+    <meta name="author" content="{{ site.author.name }}">
     <meta name="robots" content="index, follow" />
     <meta name="revisit-after" content="2 days" />
     <meta name="copyright" content="Copyleft 2014" />
@@ -23,9 +23,9 @@
     <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
     <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
     <meta name="DC.title" lang="English" content="{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title%}{{ page.title}}{% else %}{{ site.title }}{% endif %}" />
-    <meta name="DC.creator" content="{{ site.author }}" />
+    <meta name="DC.creator" content="{{ site.author.name }}" />
     <meta name="DC.description" lang="English" content="{{ site.description }}" />
-    <meta name="DC.publisher" content="{{ site.author }}" />
+    <meta name="DC.publisher" content="{{ site.author.name }}" />
     <meta name="DC.format" content="text/html" />
     <meta name="DC.language" scheme="DCTERMS.URI" content="English" />
     <!-- /Meta -->
