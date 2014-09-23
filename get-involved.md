@@ -11,6 +11,8 @@ Here are some simple ways you can get involved today (more will be added in the 
 
 * **Send us a candidate's campaign flyer**: More will be posted about this soon, but -- in summary -- before throwing out those campaign flyers, take a quick snapshot with your phone or camera (front & back please!) and <a href="mailto:everycandidate@gmail.org">send them to us</a>.
 
+* **Send us a candidate's press releases**: Same as above, take a quick snapshot with your phone or camera (front & back please!) and <a href="mailto:everycandidate@gmail.org">send them to us</a>.
+
 * **Let us know about all-candidates debates in your ward**: If you know of an upcoming all-candidates debate in your ward, please <a href="mailto:everycandidate@gmail.org">drop us a note</a>. 
 
 * **Come up with a great idea for how to make this site better**: Admittedly, we were long on intentions and short on time in building this site. Have an idea for a priority improvements, <a href="mailto:everycandidate@gmail.com">we'd be happy to hear it</a>.
