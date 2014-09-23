@@ -14,4 +14,4 @@ In the table below you can follow the links to examine the candidates for each w
 
 <iframe src="https://docs.google.com/spreadsheets/d/1ePIktd1I-U9DsVfeSrHWAN9-dMfefCgaBWwwHFwH0J0/pubhtml?gid=120986211&amp;single=true&amp;widget=true&amp;headers=false" style="width:100%; min-height: 400px;"></iframe>
 
-You can [download the raw data here](https://docs.google.com/spreadsheets/d/1ePIktd1I-U9DsVfeSrHWAN9-dMfefCgaBWwwHFwH0J0/edit?usp=sharing)
+You can [download the raw data here](https://docs.google.com/spreadsheets/d/1ePIktd1I-U9DsVfeSrHWAN9-dMfefCgaBWwwHFwH0J0/edit?usp=sharing).
