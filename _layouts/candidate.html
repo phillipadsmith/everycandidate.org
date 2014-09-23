@@ -37,7 +37,7 @@ layout: default
     {% if candidate.phone %}<dd>{{ candidate.phone }}</dd>{% endif %}
     {% if candidate.phone_home %}<dd>{{ candidate.phone_home }}</dd>{% endif %}
     {% if candidate.phone == nil %}
-    <p>If doesn't look like there are any phone numbers on file for {{ page.name }} yet. Why don't you consider <a href="{{ site.author.email }}">sending us one</a>?</p>
+    <p>If doesn't look like there are any phone numbers on file for {{ page.name }} yet. Why don't you consider <a href="mailto:{{ site.author.email }}">sending us one</a>?</p>
     {% endif %}
         
 {% if candidate.address %}<dt>Address</dt><dd>{{ candidate.address }}</dd>{% endif %}
