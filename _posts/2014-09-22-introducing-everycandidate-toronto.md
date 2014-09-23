@@ -13,7 +13,7 @@ Today we are releasing the [information that we've collected on 358 candidates f
 
 This site itself, and all of the [data](/data) it relies on, are publicly available to improve upon, remix, re-use, and re-distribute. If you see an omission or error in the data, please take a minute to [let us know](/about#contact).
 
-You'll notice the conspicuous absense of information about the 65 individuals running for the office of mayor. That is deliberate and at the core of what Every Candidate is about. We are fascinated by the question of what people running public office could tell us about a city as a whole, and -- with limited time & resources -- we decided to focus on candidates for councillor and school trustee, the 485 individuals running for positions that serve more than 2.5M residents of Toronto.
+You'll notice the conspicuous absence of information about the 65 individuals running for the office of mayor. That is deliberate and at the core of what Every Candidate is about. We are fascinated by the question of what people running public office could tell us about a city as a whole, and -- with limited time & resources -- we decided to focus on candidates for councillor and school trustee, the 485 individuals running for positions that serve more than 2.5M residents of Toronto.
 
 We have full confidence that you'll hear more than enough about the individuals running for the postion of mayor, or at least those few that are annointed as "electable" by mainstream news sources. 
 
