@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<div class="candidate">
+    <h1>{{ page.name }}</h1>
+{% for candidate in site.data.toronto_school_board %}
+{% if candidate.candidate_id == page.id %}
+
+{% if candidate.incumbent == 'yes' %}
+<p class="incumbent">{{ page.name }} is currently the incumbent in <a href="/wards#school-{{ page.ward }}">ward {{ page.ward }}</a>.</p>
+{% endif %}
+
+<p>The candidate for Toronto District School Board trustee, {{ page.name}}, registered to run in <a href="/wards#school-{{ page.ward }}">ward {{ page.ward }}</a> on {{ candidate.nomination_date_nice }}.</p>
+
+    <p>Here is the other information currently on on file for {{ page.name }}:</p>
+
+    <dl>
+        <dt>Phone Numbers</dt>
+    {% if candidate.phone %}<dd>{{ candidate.phone }}</dd>{% endif %}
+    {% if candidate.phone_campaign_office %}<dd>{{ candidate.phone_office }}</dd>{% endif %}
+    {% if candidate.phone_campaign_cell %}<dd>{{ candidate.phone_cell }}</dd>{% endif %}
+    {% if candidate.phone_home %}<dd>{{ candidate.phone_home }}</dd>{% endif %}
+    {% if candidate.phone == nil %}
+    <p>If doesn't look like there are any phone numbers on file for {{ page.name }} yet. Why don't you consider <a href="mailto:{{ site.author.email }}">sending us one</a>?</p>
+    {% endif %}
+        
+{% if candidate.address %}<dt>Address</dt><dd>{{ candidate.address }}</dd>{% endif %}
+
+        <dt>E-mail addresses</dt>
+{% if candidate.email %}<dd><a href="mailto:{{ candidate.email }}">{{ candidate.email }}</a></dd>{% endif %}
+{% if candidate.email_alt %}<dd><a href="mailto:{{ candidate.email_alt }}">{{ candidate.email_alt }}</a></dd>{% endif %}
+    {% if candidate.email == nil %}
+    <p>If doesn't look like there are any e-mail addresses on file for {{ page.name }} yet. Why don't you consider <a href="mailto:{{ site.author.email }}">sending us one</a>?</p>
+    {% endif %}
+
+
+        <dt>Links</dt>
+{% if candidate.web %}<dd><a title="Web site for {{ page.name }}" href="http://{{ candidate.web }}">{{ candidate.web }}</a></dd>{% endif %}
+    {% if candidate.linkedin %}<dd><a title="LinkedIn for {{ page.name }}" href="{{ candidate.linkedin }}">{{ page.name}} on LinkedIn</a></dd>{% endif %}
+    {% if candidate.twitter %}<dd><a title="{{ page.name }} on Twitter" href="{{ candidate.twitter }}">{{ page.name}} on Twitter</a></dd>{% endif %}
+    {% if candidate.social %}{% endif %}
+    {% if candidate.facebook %}<dd><a title="Facebook for {{ page.name }}" href="{{ candidate.facebook }}">{{ page.name}} on Facebook</a></dd>{% endif %}
+{% endif %}
+{% endfor %}
+    </dl>
+    <p>Is there information missing for this candidate? Would you mind <a href="mailto:{{ site.author.email }}">dropping us a line</a>? It only takes a minute and earns you a spot in our <a href="/about/#contributors">hall of fame</a>.</p>
+</div>
