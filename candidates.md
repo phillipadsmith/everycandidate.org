@@ -10,6 +10,8 @@ If you'd like to know why we started this project, start [here](/about). If you'
 
 As of September 22nd, 2014, we are publishing the information we've collected on all 358 candidates running for Toronto city council. In the coming days, we will publish information on the Toronto District School Board candidates.
 
+(You can also [view a list of wards here](/wards/).)
+
 ## Toronto City Council Candidates
 
 {% assign candidates = site.toronto_city_council | sort: 'name_sortby' %}

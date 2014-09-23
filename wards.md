@@ -10,6 +10,8 @@ If you'd like to know why we started this project, start [here](/about). If you'
 
 As of September 22nd, 2014, we are publishing the information we've collected on all 44 Toronto city council wards. In the coming days, we will publish information on the Toronto District School Board wards.
 
+(You can also [view a list of candidates here](/candidates/).)
+
 ## Toronto Wards
 
 {% assign wards = site.toronto_wards %}
