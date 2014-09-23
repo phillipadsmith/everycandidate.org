@@ -8,8 +8,6 @@ The (very small) "[team](/about#team)" at Every Candidate is working hard to gat
 
 If you'd like to know why we started this project, start [here](/about). If you'd like to [take the raw data](/data) and do something interesting, please do. If you'd like to help out, please [get in touch](/about#contact).
 
-As of September 22nd, 2014, we are publishing the information we've collected on all 44 Toronto city council wards. In the coming days, we will publish information on the Toronto District School Board wards.
-
 (You can also [view a list of council candidates here](/candidates/#toronto-council) and [school board trustee candidates here](/candidates/#toronto-school-board).)
 
 <ul>
