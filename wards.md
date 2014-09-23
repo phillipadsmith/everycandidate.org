@@ -18,3 +18,10 @@ As of September 22nd, 2014, we are publishing the information we've collected on
 {% for ward in wards %}
 <a id="{{ ward.wid }}" title="Toronto City Council ward {{ ward.title }}" href="{{ ward.permalink }}">{{ ward.title }} ({{ ward.wid }})</a>
 {% endfor %}
+
+## Toronto District School Board Wards
+
+{% assign school_wards = site.toronto_school_wards %}
+{% for ward in school_wards %}
+<a id="school-{{ ward.wid }}" title="Toronto District School Board ward {{ ward.title }}" href="{{ ward.permalink }}">{{ ward.title }} ({{ ward.wid }})</a>
+{% endfor %}
