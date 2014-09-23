@@ -35,3 +35,13 @@ People have [helped out](/get-involved) by sending us tips, information, or flye
 
 * Your Name Here! [Find out how you can help](/get-involved).
 * Thanks to Carol for our first contribution of missing information for [Balachandran, Niranjan](http://everycandidate.org/toronto-city-council/niranjan-balachandran-1998/)
+* Thanks to Mary-Margaret McMahon for providing her phone number.
+* HUGE thanks to [Sean Boulton](https://twitter.com/sboulton) for updating the list of Twitter handles for council candidates. That list is getting close to complete.
+* Thanks to Neil Mens for the update to [Josh Matlow's information](/toronto-city-council/josh-matlow-1952/)
+* Thanks to Don Stuart for pointing out that the candidate names on the ward page were not sorting alphabetically by last name. Fixed!
+* Thanks to Jacob at Team Farrow for providing an update to [Jane Farrow's information](/toronto-city-council/jane-farrow-2166/).
+* Thanks to Ian Irving for an update to [Matthew Bielaski's info](/toronto-city-council/matthew-bielaski-2410/)
+* Thanks to Abigail Slater for providing an update to [Kristian Chartier info](/toronto-school-board/kristian-chartier-2473/)
+* Thanks to Nat Smith for providing an update to [Paula Fletcher's info](/toronto-city-council/paula-fletcher-2279/)
+* Thanks to Tanya Hostler for providing an update on, well, [Tanya Hostler](/toronto-city-council/tanya-hostler-2421/).
+
