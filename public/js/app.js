@@ -24,13 +24,13 @@ function show_options(results) {
             message_div.append($('<a href="#" onClick="event.preventDefault();">' + this.formatted_address + '</a><br />').click(function () {
                 districts_for_geocoder_result(result);
             }));
-        })
+        });
     } 
-    else if ( results.length == 0 ) {
+    else if ( results.length === 0 ) {
         message_div.append('<p>No match for that address.</p>').removeClass("alert-warning").addClass("alert alert-error");
     }
     else {
-        districts_for_geocoder_result( results[0] )
+        districts_for_geocoder_result( results[0] );
     }
 }
 
@@ -60,8 +60,10 @@ function districts_for_geocoder_result(result) {
     var lng = result.geometry.location.lng();
     var url = 'http://represent.opennorth.ca/boundaries/?callback=?&contains=' + lat + ',' + lng;
     $.getJSON(url, function (data) {
-        data = data.objects;
-        if ( data.length === 0 ) {
+     data = data.objects;
+    var boundary_sets = data.map(function(d) { return d.boundary_set_name; });
+    boundary_sets = boundary_sets.filter(function(d) { return d === 'Toronto ward'; });
+        if ( boundary_sets.length === 0 ) {
             message_div.append('<p>No ridings found. Is that address in Toronto?</p>').removeClass("alert-success").addClass("alert-error");
         }
         $.each(data, function (index) {
@@ -74,4 +76,3 @@ function districts_for_geocoder_result(result) {
         });
     });
 }
-
