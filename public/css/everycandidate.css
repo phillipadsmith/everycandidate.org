@@ -58,7 +58,7 @@ h3.masthead-title {
     margin-bottom: 10px;
 }
 #riding-search-mobile input[type="text"] {
-    width: 50%;
+    width: 75%;
     padding: 5px 0 5px 5px;
     font-size: 1rem;
 }
@@ -67,6 +67,12 @@ h3.masthead-title {
     font-size: 1rem;
 }
 
+#quick-nav {
+    border-bottom: 1px solid #eee;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+}
 
 /* ==========================================================================
 Progressively enhance for larger screens 
