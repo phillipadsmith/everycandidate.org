@@ -1,4 +1,4 @@
-// Let the user search for their riding by address
+// Let the user search for their ward by address
 var message_div = $('.riding-message');
 // Riding lookup based on user input
 $('.riding-search').submit(function (e) {
@@ -64,7 +64,7 @@ function districts_for_geocoder_result(result) {
     var boundary_sets = data.map(function(d) { return d.boundary_set_name; });
     boundary_sets = boundary_sets.filter(function(d) { return d === 'Toronto ward'; });
         if ( boundary_sets.length === 0 ) {
-            message_div.append('<p>No ridings found. Is that address in Toronto?</p>').removeClass("alert-success").addClass("alert-error");
+            message_div.append('<p>No ward found. Is that address in Toronto?</p>').removeClass("alert-success").addClass("alert-error");
         }
         $.each(data, function (index) {
             if ( this.boundary_set_name == 'Toronto ward' ) {
