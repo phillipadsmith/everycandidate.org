@@ -68,11 +68,14 @@ function districts_for_geocoder_result(result) {
         }
         $.each(data, function (index) {
             if ( this.boundary_set_name == 'Toronto ward' ) {
-                var link = this.name.toLowerCase().replace(/\(/g, "");
-                                                           link = link.replace(/\)/g, "");
-                                                           link = link.replace(/\W/g, "-");
-                                                           message_div.append('<p>Your ward is most likely <a href="/toronto-ward/' + link + '">' + this.name + ', visit the ward page</a>.</p>').removeClass("alert-warning").addClass("alert alert-success");
-            }
+               var link = this.name.toLowerCase();
+               link = link.replace(/\(/g, ""); // parens
+               link = link.replace(/\)/g, ""); // parens
+               link = link.replace(/'/g, ""); //  quotes
+               link = link.replace(/\./g, ""); //  periods
+               link = link.replace(/\W/g, "-");
+               message_div.append('<p>Your ward is most likely <a href="/toronto-ward/' + link + '">' + this.name + ', visit the ward page</a>.</p>').removeClass("alert-warning").addClass("alert alert-success");
+}
         });
     });
 }
