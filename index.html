@@ -2,7 +2,16 @@
 layout: default
 title: Home
 ---
-
+<div id="riding-lookup">
+    <form id="riding-search-mobile" class="riding-search">
+        <span>Search for your city ward by address:</span><br>
+        <input type="text" size="25" placeholder="Your address: Street, City." autofocus="">&nbsp;
+        <input type="submit" value="Go"><br>
+        <span id="geolocate-span" style="display:none;">We can also try to <a href="#" id="geolocate-link">automatically find your city ward</a> based on your location.</span> Or you can select from a <a href="/wards/">list of wards</a>.
+    </form>
+    <div id="riding-message-mobile" class="riding-message"></div>
+</div>
+    
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
