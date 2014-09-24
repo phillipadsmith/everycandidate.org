@@ -7,10 +7,10 @@ layout: default
 {% if candidate.candidate_id == page.id %}
 
 {% if candidate.incumbent %}
-<p class="incumbent">{{ page.name }} is currently the incumbent in <a href="/wards#{{ page.ward }}">ward {{ page.ward }}</a>.</p>
+<p class="incumbent">{{ page.name }} is currently the incumbent in <a href="/wards/#{{ page.ward }}">ward {{ page.ward }}</a>.</p>
 {% endif %}
 
-<p>The candidate for Toronto city council, {{ page.name}}, registered to run in <a href="/wards#{{ page.ward }}">ward {{ page.ward }}</a> on {{candidate.nomination_date }}.</p>
+<p>The candidate for Toronto city council, {{ page.name}}, registered to run in <a href="/wards/#{{ page.ward }}">ward {{ page.ward }}</a> on {{candidate.nomination_date }}.</p>
 
 {% if candidate.ran_2010 %}
     <p><i class="fa fa-bullhorn fa-border"></i> Someone with the name {{ page.name }} ran in the 2010 municipal election.
