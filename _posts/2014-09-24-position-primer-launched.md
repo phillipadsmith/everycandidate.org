@@ -8,6 +8,6 @@ Just in case you didn't catch the big news yesterday: the tireless folks at [Wom
 
 If you're still reading, we can tell you that it's an incredible resource for Toronto residents who are keen to compare candidates running in their ward on key issues. Candidates had to keep their responses short, which is the real innovation here: Bite-sized, side-by-side comparison.
 
-We like the project so much that we've added a link directly from [Every Candidate's ward pages](/wards/) to the matching patch on the Position Primer. 
+We like the project so much that we've added a link directly from [Every Candidate's ward pages](/wards/) to the matching ward page on the Position Primer. 
 
 On a side note, Every Candidate crashed the Position Primer launch party last night (actually, we were invited, I swear) and had the opportunity to meet and congratulate some of the fine folks who were involved.  Once again, congrats on an amazing project! 
