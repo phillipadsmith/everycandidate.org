@@ -140,19 +140,20 @@ end
 row_num  = 0
 err_count = 0
 
-
+puts  "Testing #{user_type} file #{filename}"
 CSV.foreach(filename) do |row|
+
 
   #  puts "#{row_num} #{row[3]}  #{row[22]} " unless row_num == 0
   print "="
-  err_count += testUser(row, user_type, row_num) unless row_num == 0 || row_num == 180
-  #testUser(row) if  row_num == 180
+  err_count += testUser(row, user_type, row_num) unless row_num == 0
+  #testUser(row, user_type, row_num) if  row_num == 180
   row_num += 1
 
-  break if row_num >   1000
+#  break if row_num >   1000
 
 end
-print "\nDONE : #{row_num} examined; #{err_count} ERRORS Found\n"
+print "\nDONE : #{row_num} examined; #{err_count} ERRORS Found in #{user_type} file #{filename}\n"
 
 
 #ARGV.map {|url| fetch(url)}
