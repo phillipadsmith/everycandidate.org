@@ -1263,6 +1263,23 @@ DISTRIBUTIONS
       File::Spec 0
       strict 0
       warnings 0
+  IO-Socket-SSL-1.998
+    pathname: S/SU/SULLR/IO-Socket-SSL-1.998.tar.gz
+    provides:
+      IO::Socket::SSL 1.998
+      IO::Socket::SSL::Intercept 1.93
+      IO::Socket::SSL::OCSP_Cache 1.998
+      IO::Socket::SSL::OCSP_Resolver 1.998
+      IO::Socket::SSL::PublicSuffix undef
+      IO::Socket::SSL::SSL_Context 1.998
+      IO::Socket::SSL::SSL_HANDLE 1.998
+      IO::Socket::SSL::Session_Cache 1.998
+      IO::Socket::SSL::Utils 0.03
+    requirements:
+      ExtUtils::MakeMaker 0
+      Mozilla::CA 0
+      Net::SSLeay 1.46
+      Scalar::Util 0
   List-AllUtils-0.08
     pathname: D/DR/DROLSKY/List-AllUtils-0.08.tar.gz
     provides:
@@ -1516,6 +1533,24 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Pod::Simple 3.09
       Time::Local 1.2
+  Mozilla-CA-20130114
+    pathname: A/AB/ABH/Mozilla-CA-20130114.tar.gz
+    provides:
+      Mozilla::CA 20130114
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test 0
+      perl 5.006
+  Net-SSLeay-1.66
+    pathname: M/MI/MIKEM/Net-SSLeay-1.66.tar.gz
+    provides:
+      Net::SSLeay 1.66
+      Net::SSLeay::Handle 0.61
+    requirements:
+      ExtUtils::MakeMaker 6.36
+      MIME::Base64 0
+      Test::More 0.60_01
+      perl 5.005
   Package-Stash-0.36
     pathname: D/DO/DOY/Package-Stash-0.36.tar.gz
     provides:
