@@ -35,7 +35,7 @@ layout: default
 
 
         <dt>Links</dt>
-{% if candidate.web %}<dd><a title="Web site for {{ page.name }}" href="http://{{ candidate.web }}">{{ candidate.web }}</a></dd>{% endif %}
+{% if candidate.web %}<dd><a title="Web site for {{ page.name }}" href="{{ candidate.web }}">{{ candidate.web }}</a></dd>{% endif %}
     {% if candidate.linkedin %}<dd><a title="LinkedIn for {{ page.name }}" href="{{ candidate.linkedin }}">{{ page.name}} on LinkedIn</a></dd>{% endif %}
     {% if candidate.twitter %}<dd><a title="{{ page.name }} on Twitter" href="{{ candidate.twitter }}">{{ page.name}} on Twitter</a></dd>{% endif %}
     {% if candidate.social %}{% endif %}
