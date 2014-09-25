@@ -124,24 +124,28 @@ def fetch(uri_str, limit = 10)
   end
 end
 
-def validateCsvHeader(headerRow, user_type)
+def validateCsvHeader(headerRow, file_type)
 
   validHeaders = []
 
-  if user_type == 'council'
+  if file_type == 'council'
       validHeaders = ["candidate_id", "name_first", "name_last", "name_full", "ward", "postalcode", "incumbent", "ran_2010", "ran_2006", "contribute_2010", "contribute_2006", "lobbyist_registry", "phone_old", "phone", "campaign_office", "phone_cell", "phone_home", "address", "facebook", "twitter", "email", "email_alt", "website", "linkedin", "nomination_date", "slug", "sorby"]
-  elsif user_type == 'tdsb'
+  elsif file_type == 'tdsb'
       validHeaders = ["candidate_id", "school_ward", "name_last", "name_first", "name_full", "incumbent", "email", "email_alt", "phone", "phone_campaign_office", "phone_cell", "phone_home", "address", "web", "facebook", "twitter", "misc", "nomination_date", "nomination_date_nice", "sortby", "slug"]
   else
       return false
   end
   x = 0
-  headerRow.each do |column|
+  validHeaders.each do |column|
 #    puts "column= #{column}  and expecting #{validHeaders[x]} "
     if  column != validHeaders[x]
       return false
     end
     x += 1
+  end
+
+  if headerRow.length > validHeaders.length
+    puts  "Hmm ... the header columns for the #{file_type} is LONGER than expected\n"
   end
 
   return true
@@ -191,7 +195,7 @@ csv.each do |row|
   #testUser(row, user_type, row_num) if  row_num == 180
   row_num += 1
 
- # break if row_num >   1000
+#  break if row_num >   1000
 
 end
 print "\nDONE : #{row_num} examined; #{err_count} ERRORS Found in #{user_type} file #{filename}\n"
