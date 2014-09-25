@@ -27,8 +27,10 @@ def testUser(user_row, user_type, row_num)
 
 #  testColArr.each do  |column_value|
   testColArr.map do  |column_value|
-  #  puts "#{user_row[fullName_col]} ERROR #{isUserColumnValueURLGood?(user_row,column_value)} for #{user_row[column_value]}"
-    errorArr.push(user_row[column_value]) unless  isUserColumnValueURLGood?(user_row,column_value)
+    unless user_row[column_value] == nil
+#      puts "#{user_row[fullName_col]} ERROR #{isUserColumnValueURLError?(user_row,column_value)} for #{user_row[column_value]}"
+      errorArr.push(user_row[column_value]) if isUserColumnValueURLError?(user_row,column_value)
+    end
   end
 
   print "\n #{errorArr.length} Error(s) found for #{user_row[fullName_col]} on file row #{row_num} >>" if  errorArr.length > 0
@@ -42,14 +44,14 @@ def testUser(user_row, user_type, row_num)
 
 end
 
-def isUserColumnValueURLGood?(user_row, col_num)
+def isUserColumnValueURLError?(user_row, col_num)
   get_value_to_test = user_row[col_num]
-  #puts "get_value_to_test= #{get_value_to_test.inspect}"
-  if get_value_to_test == nil then
-    return true
-  else
-    return fetch(get_value_to_test) unless get_value_to_test == nil
-  end
+
+  return false if get_value_to_test == nil #nothing to test
+  get_value_to_test = get_value_to_test.strip #trim leading and trail spaces
+  return true if get_value_to_test.match(' ') #if there  are spaces inside the url its bad
+
+  return !fetch(get_value_to_test.gsub(/\s+/, "")) unless get_value_to_test == nil
 
 end
 
@@ -62,10 +64,16 @@ def fetch(uri_str, limit = 10)
 
   debug = false # or true to see various extra noise
 
-  uri = URI uri_str
-  scheme = uri.scheme
-  puts scheme if debug
-  uri_str = "http://"+uri_str unless scheme
+  begin
+    uri = URI uri_str
+    scheme = uri.scheme
+    puts scheme if debug
+    uri_str = "http://"+uri_str unless scheme
+
+  rescue => e
+    puts "ERROR for #{uri_str} is #{e}"
+    return  false
+  end
 
 
 
@@ -97,7 +105,7 @@ def fetch(uri_str, limit = 10)
   rescue => e
 #    puts "ERROR for #{uri_str} is #{e.code}" if e.code
     puts "ERROR for #{uri_str} is #{e}"
-    return "ERROR for #{uri_str} is #{e}"
+    return  false
   end
 
   case response
@@ -115,6 +123,35 @@ def fetch(uri_str, limit = 10)
     return false
   end
 end
+
+def validateCsvHeader(headerRow, file_type)
+
+  validHeaders = []
+
+  if file_type == 'council'
+      validHeaders = ["candidate_id", "name_first", "name_last", "name_full", "ward", "postalcode", "incumbent", "ran_2010", "ran_2006", "contribute_2010", "contribute_2006", "lobbyist_registry", "phone_old", "phone", "campaign_office", "phone_cell", "phone_home", "address", "facebook", "twitter", "email", "email_alt", "website", "linkedin", "nomination_date", "slug", "sorby"]
+  elsif file_type == 'tdsb'
+      validHeaders = ["candidate_id", "school_ward", "name_last", "name_first", "name_full", "incumbent", "email", "email_alt", "phone", "phone_campaign_office", "phone_cell", "phone_home", "address", "web", "facebook", "twitter", "misc", "nomination_date", "nomination_date_nice", "sortby", "slug"]
+  else
+      return false
+  end
+  x = 0
+  validHeaders.each do |column|
+#    puts "column= #{column}  and expecting #{validHeaders[x]} "
+    if  column != validHeaders[x]
+      return false
+    end
+    x += 1
+  end
+
+  if headerRow.length > validHeaders.length
+    puts  "Hmm ... the header columns for the #{file_type} is LONGER than expected\n"
+  end
+
+  return true
+
+end
+
 
 
 user_type = ARGV[0]
@@ -141,9 +178,17 @@ row_num  = 0
 err_count = 0
 
 puts  "Testing #{user_type} file #{filename}"
-CSV.foreach(filename) do |row|
 
+csv = CSV.read(filename)
 
+if validateCsvHeader(csv[0], user_type)
+  puts  "the header columns for file #{filename} look okay\n"
+else
+  puts  "ERROR, the header columns for file #{filename} DON'T look right!\n"
+  exit
+end
+
+csv.each do |row|
   #  puts "#{row_num} #{row[3]}  #{row[22]} " unless row_num == 0
   print "="
   err_count += testUser(row, user_type, row_num) unless row_num == 0
