@@ -124,6 +124,31 @@ def fetch(uri_str, limit = 10)
   end
 end
 
+def validateCsvHeader(headerRow, user_type)
+
+  validHeaders = []
+
+  if user_type == 'council'
+      validHeaders = ["candidate_id", "name_first", "name_last", "name_full", "ward", "postalcode", "incumbent", "ran_2010", "ran_2006", "contribute_2010", "contribute_2006", "lobbyist_registry", "phone_old", "phone", "campaign_office", "phone_cell", "phone_home", "address", "facebook", "twitter", "email", "email_alt", "website", "linkedin", "nomination_date", "slug", "sorby"]
+  elsif user_type == 'tdsb'
+      validHeaders = ["candidate_id", "school_ward", "name_last", "name_first", "name_full", "incumbent", "email", "email_alt", "phone", "phone_campaign_office", "phone_cell", "phone_home", "address", "web", "facebook", "twitter", "misc", "nomination_date", "nomination_date_nice", "sortby", "slug"]
+  else
+      return false
+  end
+  x = 0
+  headerRow.each do |column|
+#    puts "column= #{column}  and expecting #{validHeaders[x]} "
+    if  column != validHeaders[x]
+      return false
+    end
+    x += 1
+  end
+
+  return true
+
+end
+
+
 
 user_type = ARGV[0]
 #puts  user_type
@@ -149,16 +174,24 @@ row_num  = 0
 err_count = 0
 
 puts  "Testing #{user_type} file #{filename}"
-CSV.foreach(filename) do |row|
 
+csv = CSV.read(filename)
 
+if validateCsvHeader(csv[0], user_type)
+  puts  "the header columns for file #{filename} look okay\n"
+else
+  puts  "ERROR, the header columns for file #{filename} DON'T look right!\n"
+  exit
+end
+
+csv.each do |row|
   #  puts "#{row_num} #{row[3]}  #{row[22]} " unless row_num == 0
   print "="
   err_count += testUser(row, user_type, row_num) unless row_num == 0
   #testUser(row, user_type, row_num) if  row_num == 180
   row_num += 1
 
-#  break if row_num >   100
+ # break if row_num >   1000
 
 end
 print "\nDONE : #{row_num} examined; #{err_count} ERRORS Found in #{user_type} file #{filename}\n"
