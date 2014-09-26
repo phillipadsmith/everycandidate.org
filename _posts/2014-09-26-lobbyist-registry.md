@@ -23,7 +23,7 @@ The office defines "lobbying" as follows:
 
 > In general, lobbying consists of activities that can influence the opinions or actions of a public office holder ... lobbying is communicating with a public office holder on a range of subjects including decisions on by-laws, policies and programs, grants, purchasing, and applications for services, permits, licenses or other permission.
 
-There are two types of lobbyst listed above, and here are how they are defined by the city:
+There are two types of lobbyst listed above. Here is how they are defined by the city:
 
 > A **consultant lobbyist** is someone who — for payment — lobbies on behalf of a client (another individual, company, partnership or organization). 
 
