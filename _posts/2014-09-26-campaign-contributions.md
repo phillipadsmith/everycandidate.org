@@ -13,7 +13,7 @@ The table below pulls together public data that is avaialble from the City Clerk
 > made a financial contribution or equivalent in goods/services to any election campaign between the period of 2010 to 2013. This dataset identifies those who contributed a combined amount of $100 or more to an election campaign. The disclosure of this information is authorized under the Municipal Elections Act, 1996.
 
 
-We've also added this information, as well as contributions from the 2006 election period, to each of the candidate pages here at Every Candidate.
+We've added this information, as well as contributions from the 2006 election period, to each of the candidate pages here at Every Candidate.
 
 We'll let you do the analysis and look for the patterns. Let us know what you think.
 
