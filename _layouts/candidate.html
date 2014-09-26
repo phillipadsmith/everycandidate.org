@@ -20,10 +20,10 @@ layout: default
 {% endif %}
 
 {% if candidate.contribute_2010 %}
-<p><i class="fa fa-usd fa-border"></i> Someone with the name {{ page.name }} contributed ${{ candidate.contribute_2010 }} in the 2010 election.</p>
+<p><i class="fa fa-usd fa-border"></i> Someone with the name {{ page.name }} contributed ${{ candidate.contribute_2010 }} to {{ candidate.gave_to_2010 }} in the 2010 election.</p>
 {% endif %}
 {% if candidate.contribute_2006 %}
-<p><i class="fa fa-usd fa-border"></i> Someone with the name {{ page.name }} contributed ${{ candidate.contribute_2006 }} in the 2006 election.</p>
+<p><i class="fa fa-usd fa-border"></i> Someone with the name {{ page.name }} contributed ${{ candidate.contribute_2006 }} to {{ candidate.gave_to_2006 }}  in the 2006 election.</p>
 {% endif %}
 
 {% if candidate.lobbyist_registry %}
