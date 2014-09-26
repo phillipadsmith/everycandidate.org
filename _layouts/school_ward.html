@@ -10,8 +10,9 @@ layout: default
     {% endif %}
     <h2>Candidates for Toronto District School Board trustee</h2>
     <ul>
-{% assign candidates = site.data.toronto_school_board | sort: 'sortby' %}
+{% assign candidates = site.data.toronto_school_board | sort: 'name_last_lower' %}
 {% for candidate in candidates %}
+{{ candidate }}
 {% if candidate.school_ward == page.wid %}
 <li><a title="Information on Toronto District School Board (ward {{ page.wid }}) trustee candidate {{ candidate.name_full }}" href="/toronto-school-board/{{ candidate.slug }}">{{ candidate.name_full }}</a> {% if candidate.incumbent == 'yes' %}(Incumbent){% endif %}</li>
 {% endif %}
