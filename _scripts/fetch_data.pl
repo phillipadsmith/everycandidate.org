@@ -30,6 +30,8 @@ my $sheets = {
     }
 };
 
+#https://docs.google.com/spreadsheets/d/1ePIktd1I-U9DsVfeSrHWAN9-dMfefCgaBWw…?format=csv&id=1ePIktd1I-U9DsVfeSrHWAN9-dMfefCgaBWwwHFwH0J0&gid=1113661765"
+
 my $ua = Mojo::UserAgent->new->max_redirects( 5 );
 
 for my $sheet ( keys %$sheets ) {
@@ -38,7 +40,7 @@ for my $sheet ( keys %$sheets ) {
     my $csv
         = $ua->get( GOOGLE_SHEET_URL
             . SHEET_ID
-            . '/export?format=csv&amp;gid='
+            . '/export?format=csv&id=' . SHEET_ID . '&gid='
             . $sheets->{$sheet}->{'gid'} )->res->body;
     say "Outputting  to $sheets->{ $sheet }->{'gid'} to "
         . OUTPUT_PATH
