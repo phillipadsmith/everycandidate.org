@@ -56,7 +56,7 @@ layout: default
     <p>Is there information missing for this candidate? Would you mind <a href="mailto:{{ site.author.email }}">dropping us a line</a>? It only takes a minute and earns you a spot in our <a href="/about/#contributors">hall of fame</a>.</p>
     <br />
     <img src="/public/img/position-primer-logo.png" style="float: left; padding: 0 10px 10px 0;">
-    <p>For a bite-sized view of <strong>candidate positions</strong> on 10 important issues for Toronto, please visit the <a href="http://positionprimer.ca/html/ward_{{ page.ward }}.html">Ward {{ page.ward }}</a> page on the excellent <a href="http://positionprimar.ca">Position Primer web site</a></p>
+    <p>For a bite-sized view of <strong>candidate positions</strong> on 10 important issues for Toronto, please visit the <a href="http://positionprimer.ca/html/ward_{{ page.ward }}.html">Ward {{ page.ward }}</a> page on the excellent <a href="http://positionprimer.ca">Position Primer web site</a></p>
     {% if candidate.tcat_link != '#N/A' %}
         {% if candidate.tcat_link != '' %}
     <br />
@@ -65,6 +65,7 @@ layout: default
     </p>
         {% endif %}
     {% endif %}
+    <p>
 {% endif %}
 {% endfor %}
 </div>
