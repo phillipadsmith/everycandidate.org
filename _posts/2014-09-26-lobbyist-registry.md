@@ -2,6 +2,7 @@
 layout: post
 title: "Are seven lobbyists running for city council in Toronto's upcoming election?"
 date: 2014-09-26 15:25:00 # This is used in place of the filename
+published: false
 ---
 
 Following up on [this morning's post on candidate's past campaign contributions](/2014/09/26/campaign-contributions/), we are releasing a list of candidates who are running for city council positions and where the candidate's name appears to be listed in the [City of Toronto's Lobbyist Registry System](http://app.toronto.ca/lobbyistsearch/disclaimer.do): 
@@ -28,6 +29,3 @@ There are two types of lobbyst listed above, and here are how they are defined b
 > A **consultant lobbyist** is someone who — for payment — lobbies on behalf of a client (another individual, company, partnership or organization). 
 
 > An **in-house lobbyist** is an employee, partner or sole proprietor who lobbies on behalf of their own employer, business or organization. 
-
-Let us know your thoughts on previously- or currently-registered lobbyists running for city council.
-
