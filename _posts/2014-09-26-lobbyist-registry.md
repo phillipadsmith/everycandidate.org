@@ -2,7 +2,6 @@
 layout: post
 title: "Are seven lobbyists running for city council in Toronto's upcoming election?"
 date: 2014-09-26 15:25:00 # This is used in place of the filename
-published: false
 ---
 
 Following up on [this morning's post on candidate's past campaign contributions](/2014/09/26/campaign-contributions/), we are releasing a list of candidates who are running for city council positions and where the candidate's name appears to be listed in the [City of Toronto's Lobbyist Registry System](http://app.toronto.ca/lobbyistsearch/disclaimer.do): 
@@ -14,7 +13,7 @@ Following up on [this morning's post on candidate's past campaign contributions]
 {% endif %}
 {% endfor %}
 
-Note that these results are based on a name match with a record in the City's Lobbyist Registry System. Records may indicate a prior or current registration: please search the [registry](http://app.toronto.ca/lobbyistsearch/disclaimer.do) for more information on the specific activities. If you believe that there is an error in the information listed above, please <a href="mailto:everycandidate@gmail.com">let us know</a>.
+Note that these results are based on a name, address, or phone number match with a record in the City's Lobbyist Registry System. Records may indicate a prior or current registration: please search the [registry](http://app.toronto.ca/lobbyistsearch/disclaimer.do) for more information on the specific activities. If you believe that there is an error in the information listed above, please <a href="mailto:everycandidate@gmail.com">let us know</a>.
 
 According to the [Office of the Lobbyist Registrar site](http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=cf1fb7537e35f310VgnVCM10000071d60f89RCRD&appInstanceName=default), the office's responsibilities are to:
 
