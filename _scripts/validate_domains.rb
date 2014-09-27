@@ -13,13 +13,16 @@ def testUser(user_row, user_type, row_num)
   testEmailColArr = []
 
   if user_type == 'council'
-    testColArr = [18, 19, 22, 23 ]
-    testEmailColArr = [20,21]
-    fullName_col = 3
+    #testColArr =# [18, 19, 22, 23 ]
+    testColArr = ["facebook", "twitter", "email", "email_alt", "website", "linkedin"]
+    #testEmailColArr = [20,21]
+    testEmailColArr = [ "email", "email_alt"]
+    fullName_col = 'name_full'
   elsif user_type == 'tdsb'
-    fullName_col = 4
-    testColArr = [13, 14, 15 ]
-    testEmailColArr = [5,6]
+    fullName_col = 'name_full'
+  #  testColArr = [13, 14, 15 ]
+    testColArr = [  "web", "facebook", "twitter"]
+    testEmailColArr = ["email", "email_alt"]
   else
     return 0
   end
@@ -179,26 +182,23 @@ err_count = 0
 
 puts  "Testing #{user_type} file #{filename}"
 
-csv = CSV.read(filename)
+csv = CSV.read(filename, headers:true)
 
-if validateCsvHeader(csv[0], user_type)
-  puts  "the header columns for file #{filename} look okay\n"
-else
-  puts  "ERROR, the header columns for file #{filename} DON'T look right!\n"
-  exit
-end
+# if validateCsvHeader(csv[0], user_type)
+#   puts  "the header columns for file #{filename} look okay\n"
+# else
+#   puts  "ERROR, the header columns for file #{filename} DON'T look right!\n"
+#   exit
+# end
 
-csv.each do |row|
-  #  puts "#{row_num} #{row[3]}  #{row[22]} " unless row_num == 0
+csv.each_with_index do |row, index |
+  #puts "#{index} #{row['name_full']}  #{row[22]} " # unless row_num == 0
   print "="
-  err_count += testUser(row, user_type, row_num) unless row_num == 0
-  #testUser(row, user_type, row_num) if  row_num == 180
+  err_count += testUser(row, user_type, index) #unless row_num == 0
+
   row_num += 1
 
-#  break if row_num >   1000
+#  break if index >   10000
 
 end
 print "\nDONE : #{row_num} examined; #{err_count} ERRORS Found in #{user_type} file #{filename}\n"
-
-
-#ARGV.map {|url| fetch(url)}
