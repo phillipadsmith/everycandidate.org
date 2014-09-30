@@ -42,6 +42,17 @@ People have [helped out](/get-involved) by sending us tips, information, or flye
 * Thanks to Jacob at Team Farrow for providing an update to [Jane Farrow's information](/toronto-city-council/jane-farrow-2166/).
 * Thanks to Ian Irving for an update to [Matthew Bielaski's info](/toronto-city-council/matthew-bielaski-2410/)
 * Thanks to Abigail Slater for providing an update to [Kristian Chartier info](/toronto-school-board/kristian-chartier-2473/)
-* Thanks to Nat Smith for providing an update to [Paula Fletcher's info](/toronto-city-council/paula-fletcher-2279/)
+* Thanks to Nathaniel Smith for providing an update to [Paula Fletcher's info](/toronto-city-council/paula-fletcher-2279/)
 * Thanks to Tanya Hostler for providing an update on, well, [Tanya Hostler](/toronto-city-council/tanya-hostler-2421/).
+* Thanks to Mary Hynes for proviing an update on Mary Hynes.
+* Thanks to Kristian Chartier for providing an update on Kristian Chartier.
+* Thanks to Andrew Schwab for udpates to Mike Layton & Joe Cressy's information.
+* Thanks to Somu Mondal for contributing a write-up for [Ward 42](/toronto-ward/scarborough-rouge-river-42/)
+* Thanks to Melissa Wong for an update to Kristyn Wong-Tam's information.
+* Thanks to Mary Cruden for pointing us to her [Toronto Star Op-Ed on school trustees](http://www.thestar.com/opinion/commentary/2014/09/19/theres_no_excuse_for_ignoring_school_board_election.html).
+* Thanks to George Emerson for an update to Charmain Emerson's information.
+* Thanks to Anthony Schein for updates to the Alejandra Bravo profile.
+* Thanks to Don Stuart for an update to the Don Stuart page.
+* Thanks to William Dale for an update to the Gaye Dale page.
+* Thanks to Genevieve Tran for some great web site improvement ideas.
 
