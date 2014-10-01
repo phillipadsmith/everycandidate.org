@@ -11,7 +11,7 @@ date: 2014-10-01 9:25:00 # This is used in place of the filename
 {% assign candidatessource = site.data.toronto_council | sort: 'name_last_lower' %}
 {% for candidate in candidatessource %}
 {% if candidate.twitter_profile_photo != nil %}
-<a title="{{ candidate.name_full }} (Ward {{ candidate.ward }}): {{ candidate.twitter_description | escape }}" href="/toronto-city-council/{{ candidate.slug }})"><img style="float: left;" src="{{ candidate.twitter_profile_photo}}" title="{{ candidate.name_full }} (Ward {{ candidate.ward }}): {{ candidate.twitter_description | escape }}" /></a>
+<a title="{{ candidate.name_full }} (Ward {{ candidate.ward }}): {{ candidate.twitter_description | escape }}" href="/toronto-city-council/{{ candidate.slug }}"><img style="float: left;" src="{{ candidate.twitter_profile_photo}}" title="{{ candidate.name_full }} (Ward {{ candidate.ward }}): {{ candidate.twitter_description | escape }}" /></a>
 {% endif %}
 {% endfor %}
 <br clear="all" />
