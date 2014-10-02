@@ -3,7 +3,7 @@ require "net/http"
 require "resolv-replace.rb" #for better socket errors"
 require 'optparse'
 
-
+CSV_ROW_OFFSET = 2 #the first row of users is the 2 row in the csv file, but the  [0] part of the array
 
 
 def testUser(user_row, user_type, row_num)
@@ -37,7 +37,7 @@ def testUser(user_row, user_type, row_num)
     end
   end
 
-  print "\n #{errorArr.length} Error(s) found for #{user_row[fullName_col]} on file row #{row_num} >>" if  errorArr.length > 0
+  print "\n #{errorArr.length} Error(s) found for #{user_row[fullName_col]} on file row #{row_num + CSV_ROW_OFFSET} >>" if  errorArr.length > 0
   errorArr.each do |error|
      print "\t#{error}"
   end
@@ -169,7 +169,6 @@ OptionParser.new do |opts|
   opts.banner = "Usage: example.rb <type> [options], \n   "+typeErrorMsg
 
 
-
   opts.on("-v", "--verbose", "Run verbosely") do |v|
     options[:verbose] = v
   end
@@ -190,14 +189,16 @@ ARGV.each{ |fn| puts fn }
 
 data_type = ARGV.pop
 
- unless data_type
-   puts "Need to specify a <type> to process, "+typeErrorMsg
+unless data_type
+  puts "Need to specify a <type> to process, "+typeErrorMsg
   exit
- end
+end
 
-p options
-p ARGV
+#covert strings to integer and then sort, drop the row number down 1
+options[:list].map!(&:to_i).sort!.map!{|i| i - CSV_ROW_OFFSET} if options[:list]
 
+# p options
+# p ARGV
 
 
 #user_type = ARGV[0]
@@ -232,13 +233,16 @@ csv = CSV.read(filename, headers:true)
 # end
 
 csv.each_with_index do |row, index |
-  #puts "#{index} #{row['name_full']}  #{row[22]} " # unless row_num == 0
+ # puts "#{index} #{row['name_full']}  #{row[22]} " if !options[:list] || options[:list].include?(index)
+ # puts "list is there"  if options[:list]
+ # puts "#{index} is there"  if !options[:list] || options[:list].include?(index)
+
   print "="
-  err_count += testUser(row, data_type, index) #unless row_num == 0
+  err_count += testUser(row, data_type, index) if !options[:list] || options[:list].include?(index)
 
   row_num += 1
 
-#  break if index >   10000
+#  break if index >   10
 
 end
-print "\nDONE : #{row_num} examined; #{err_count} ERRORS Found in #{data_type} file #{filename}\n"
+print "\nDONE : #{row_num} file users examined; #{err_count} ERRORS Found in #{data_type} file #{filename}\n"
