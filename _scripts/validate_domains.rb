@@ -258,5 +258,7 @@ csv.each_with_index do |row, index |
  # break if index >   10
 
 end
+row_num = options[:list].length if options[:list]
+
 print "\nDONE : #{row_num} file users examined; #{err_count} ERRORS Found in #{data_type} file #{filename}\n"
 puts "Duration: #{Time.now - start} seconds"
