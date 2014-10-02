@@ -28,7 +28,7 @@ Here's a quick rundown of the most recent updates:
 {% assign candidatessource = site.data.toronto_school_board | sort: 'name_last_lower' %}
 {% for candidate in candidatessource %}
 {% if candidate.updated %}
-* [{{ candidate.name_full }}](/toronto-school-board/{{ candidate.slug }}), [Ward {{ candidate.ward }}](/wards/#{{ candidate.ward }}) 
+* [{{ candidate.name_full }}](/toronto-school-board/{{ candidate.slug }}), [Ward {{ candidate.school_ward }}](/wards/#school-{{ candidate.school_ward }}) 
 {% endif %}
 {% endfor %}
 

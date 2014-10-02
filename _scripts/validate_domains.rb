@@ -22,7 +22,7 @@ def testUser(user_row, user_type, row_num)
   elsif user_type == 'tdsb'
     fullName_col = 'name_full'
   #  testColArr = [13, 14, 15 ]
-    testColArr = [  "web", "facebook", "twitter"]
+    testColArr = [  "website", "facebook", "twitter"]
     testEmailColArr = ["email", "email_alt"]
   else
     return 0
