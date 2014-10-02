@@ -1,6 +1,7 @@
 require 'csv'
 require "net/http"
 require "resolv-replace.rb" #for better socket errors"
+require 'optparse'
 
 
 
@@ -157,20 +158,59 @@ end
 
 
 
-user_type = ARGV[0]
+options = {}
+
+ARGV.push('-h') if ARGV.empty?
+ARGV.push('-h') if ARGV[0].empty?
+
+typeErrorMsg = ' where <type> is council or tdsb'
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: example.rb <type> [options], \n   "+typeErrorMsg
+
+
+
+  opts.on("-v", "--verbose", "Run verbosely") do |v|
+    options[:verbose] = v
+  end
+
+  opts.on("-l", "--list 3,17,123", Array, "Run ony the list of row numbers") do |l|
+    options[:list] =  l
+  end
+
+  # This displays the help screen, all programs are assumed to have this option.
+  opts.on( '-h', '--help', 'Display this screen' ) do
+    puts opts
+    exit
+  end
+
+end.parse!
+
+ARGV.each{ |fn| puts fn }
+
+data_type = ARGV.pop
+
+ unless data_type
+   puts "Need to specify a <type> to process, "+typeErrorMsg
+  exit
+ end
+
+p options
+p ARGV
+
+
+
+#user_type = ARGV[0]
 #puts  user_type
-user_type = user_type.downcase unless user_type.nil?
+data_type = data_type.downcase unless data_type.nil?
 
 filename = ""
-if user_type == 'council'
+if data_type == 'council'
     filename = '_data/toronto_council.csv'
-elsif user_type == 'tdsb'
+elsif data_type == 'tdsb'
   filename = '_data/toronto_school_board.csv'
 else
-    puts 'Usage: ruby _scripts/validate_domains.rb [switches]'
-    puts '  council      load and vaildiate toronto council file.'
-    puts '  tdsb                 load and vaildiate toronto toronto district school board file.'
-    puts '  help                 show this message.'
+    puts "Need to specify a <type> to process, "+typeErrorMsg
     exit
 end
 
@@ -180,7 +220,7 @@ end
 row_num  = 0
 err_count = 0
 
-puts  "Testing #{user_type} file #{filename}"
+puts  "Testing #{data_type} file #{filename}"
 
 csv = CSV.read(filename, headers:true)
 
@@ -194,11 +234,11 @@ csv = CSV.read(filename, headers:true)
 csv.each_with_index do |row, index |
   #puts "#{index} #{row['name_full']}  #{row[22]} " # unless row_num == 0
   print "="
-  err_count += testUser(row, user_type, index) #unless row_num == 0
+  err_count += testUser(row, data_type, index) #unless row_num == 0
 
   row_num += 1
 
 #  break if index >   10000
 
 end
-print "\nDONE : #{row_num} examined; #{err_count} ERRORS Found in #{user_type} file #{filename}\n"
+print "\nDONE : #{row_num} examined; #{err_count} ERRORS Found in #{data_type} file #{filename}\n"
