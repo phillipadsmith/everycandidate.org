@@ -192,6 +192,10 @@ OptionParser.new do |opts|
     options[:list] =  l
   end
 
+  opts.on("-s", "--skip 3,17,123", Array, "skip row numbers listed (known to be trouble or blown-y)") do |l|
+    options[:skip] =  l
+  end
+
   # This displays the help screen, all programs are assumed to have this option.
   opts.on( '-h', '--help', 'Display this screen' ) do
     puts opts
@@ -200,6 +204,9 @@ OptionParser.new do |opts|
 
 end.parse!
 
+# puts "list = #{options[:list]}"
+# puts "skip = #{options[:skip]}"
+
 data_type = ARGV.pop
 
 unless data_type
@@ -207,8 +214,14 @@ unless data_type
   exit
 end
 
-#covert strings to integer and then sort, drop the row number down 1
+#covert strings to integer and then sort, drop the row number down 2
 options[:list].map!(&:to_i).sort!.map!{|i| i - CSV_ROW_OFFSET} if options[:list]
+options[:skip].map!(&:to_i).sort!.map!{|i| i - CSV_ROW_OFFSET} if options[:skip]
+#remove skip from list, just in case
+options[:list] = options[:list] - options[:skip] if options[:skip] &&  options[:list]
+
+# puts "list = #{options[:list]}"
+# puts "skip = #{options[:skip]}"
 
 # p options
 # p ARGV
@@ -246,19 +259,34 @@ csv = CSV.read(filename, headers:true)
 # end
 
 csv.each_with_index do |row, index |
- # puts "#{index} #{row['name_full']}  #{row[22]} " if !options[:list] || options[:list].include?(index)
- # puts "list is there"  if options[:list]
- # puts "#{index} is there"  if !options[:list] || options[:list].include?(index)
+  #puts "#{index} #{row['name_full']}  #{row[22]} "
 
-  print "="
-  err_count += testUser(row, data_type, index, options[:verbose]) if !options[:list] || options[:list].include?(index)
+
+  if ! (options[:list] || options[:skip]) #neither list or skip or set then do run row
+    runOnRow = true
+  elsif options[:skip] && options[:skip].include?(index) #if its in the skip  arrary then do not run row
+    runOnRow = false
+  elsif options[:list] && options[:list].include?(index) #if it in the list array then do run row
+      runOnRow = true
+  else
+      runOnRow = true
+  end
+  puts "\nSkipping row #{index + CSV_ROW_OFFSET} for #{row['name_full']} " if ((!runOnRow) && options[:verbose] )
+
+  print "=" if runOnRow
+#  err_count += testUser(row, data_type, index, options[:verbose]) if !options[:list] || options[:list].include?(index)
+  err_count += testUser(row, data_type, index, options[:verbose]) if runOnRow
+
+
 
   row_num += 1
 
- # break if index >   10
+#  break if index >   10
 
 end
 row_num = options[:list].length if options[:list]
+row_num -= options[:skip].length if options[:skip]
 
 print "\nDONE : #{row_num} file users examined; #{err_count} ERRORS Found in #{data_type} file #{filename}\n"
 puts "Duration: #{Time.now - start} seconds"
+
