@@ -156,7 +156,7 @@ def validateCsvHeader(headerRow, file_type)
 
 end
 
-
+start = Time.now
 
 options = {}
 
@@ -184,8 +184,6 @@ OptionParser.new do |opts|
   end
 
 end.parse!
-
-ARGV.each{ |fn| puts fn }
 
 data_type = ARGV.pop
 
@@ -242,7 +240,8 @@ csv.each_with_index do |row, index |
 
   row_num += 1
 
-#  break if index >   10
+ # break if index >   10
 
 end
 print "\nDONE : #{row_num} file users examined; #{err_count} ERRORS Found in #{data_type} file #{filename}\n"
+puts "Duration: #{Time.now - start} seconds"
