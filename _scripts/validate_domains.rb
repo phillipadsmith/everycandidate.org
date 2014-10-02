@@ -6,8 +6,8 @@ require 'optparse'
 CSV_ROW_OFFSET = 2 #the first row of users is the 2 row in the csv file, but the  [0] part of the array
 
 
-def testUser(user_row, user_type, row_num)
-  # id_col = 0
+def testUser(user_row, user_type, row_num, verbose)
+  #puts "testUser>verbose=#{verbose}"
 
 
   testColArr =[]
@@ -32,8 +32,15 @@ def testUser(user_row, user_type, row_num)
 #  testColArr.each do  |column_value|
   testColArr.map do  |column_value|
     unless user_row[column_value] == nil
-#      puts "#{user_row[fullName_col]} ERROR #{isUserColumnValueURLError?(user_row,column_value)} for #{user_row[column_value]}"
-      errorArr.push(user_row[column_value]) if isUserColumnValueURLError?(user_row,column_value)
+#      puts "#{user_row[fullName_col]} ERROR #{isUserColumnValueURLError?(user_row,column_value, verbose)} for #{user_row[column_value]}"
+      errorArr.push(user_row[column_value]) if isUserColumnValueURLError?(user_row, column_value, verbose)
+
+      if verbose && errorArr.include?(user_row[column_value])
+        print "\nLooks BAD : #{user_row[fullName_col]} for #{user_row[column_value]}"
+      elsif verbose
+        print "\nLooks GOOD : #{user_row[fullName_col]} for #{user_row[column_value]}"
+      end
+
     end
   end
 
@@ -43,19 +50,25 @@ def testUser(user_row, user_type, row_num)
   end
   print "\n" if  errorArr.length > 0
 
+  print "\nAll Good for #{user_row[fullName_col]} on file row #{row_num + CSV_ROW_OFFSET} >>"  if verbose && errorArr.length == 0
+
+
+
   return errorArr.length
 
 
 end
 
-def isUserColumnValueURLError?(user_row, col_num)
+def isUserColumnValueURLError?(user_row, col_num, verbose )
+ # puts "verbose=#{verbose}"
+
   get_value_to_test = user_row[col_num]
 
   return false if get_value_to_test == nil #nothing to test
   get_value_to_test = get_value_to_test.strip #trim leading and trail spaces
   return true if get_value_to_test.match(' ') #if there  are spaces inside the url its bad
 
-  return !fetch(get_value_to_test.gsub(/\s+/, "")) unless get_value_to_test == nil
+  return !fetch(get_value_to_test.gsub(/\s+/, ""), verbose) unless get_value_to_test == nil
 
 end
 
@@ -63,7 +76,8 @@ end
 
 
 
-def fetch(uri_str, limit = 10)
+def fetch(uri_str, limit = 10, verbose)
+ # puts "fetch verbose=#{verbose}"
 
 
   debug = false # or true to see various extra noise
@@ -114,16 +128,17 @@ def fetch(uri_str, limit = 10)
 
   case response
   when Net::HTTPSuccess then
-    puts "#{uri_str} is OK #{response.code}" if debug
+    #puts "\n#{uri_str} is OK #{response.code}" if verbose
     return true
     #response
   when Net::HTTPRedirection then
     location = response['location']
-    warn "redirected to #{location}" if debug
-    return fetch(location, limit - 1)
+    puts "\n#{uri_str} redirected to #{location}" if verbose
+#    puts "fetch>redirected verbose=#{verbose}"
+    return fetch(location, limit - 1, verbose)
   else
 
-    puts "#{uri_str} ERROR is #{response.code} :: #{response.message}" if debug
+    puts "\n#{uri_str} ERROR is #{response.code} :: #{response.message}" if verbose
     return false
   end
 end
@@ -236,7 +251,7 @@ csv.each_with_index do |row, index |
  # puts "#{index} is there"  if !options[:list] || options[:list].include?(index)
 
   print "="
-  err_count += testUser(row, data_type, index) if !options[:list] || options[:list].include?(index)
+  err_count += testUser(row, data_type, index, options[:verbose]) if !options[:list] || options[:list].include?(index)
 
   row_num += 1
 
