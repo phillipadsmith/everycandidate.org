@@ -74,3 +74,8 @@ People have [helped out](/get-involved) by sending us tips, information, or flye
 * Thanks to candidate Jordan Stone for an update
 * Thanks to candidate Nikola Samac for an update
 * Thanks to candidate Jennifer McKelvie for an update
+* Thanks to Kayla for an update to Joe Cressy's info
+* Thanks to candidate Ted Bustamante for an update
+* Thanks to candidate Albina Burello for an update
+* Thanks to candidate Raymond Cho for an update
+
