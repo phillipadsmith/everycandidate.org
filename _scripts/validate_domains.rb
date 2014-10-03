@@ -6,22 +6,19 @@ require 'optparse'
 CSV_ROW_OFFSET = 2 #the first row of users is the 2 row in the csv file, but the  [0] part of the array
 
 
-def testUser(user_row, user_type, row_num, verbose)
-  #puts "testUser>verbose=#{verbose}"
 
+
+def testUser(user_row, data_type, row_num, verbose)
 
   testColArr =[]
   testEmailColArr = []
 
-  if user_type == 'council'
-    #testColArr =# [18, 19, 22, 23 ]
+  if data_type == 'council'
     testColArr = ["facebook", "twitter", "email", "email_alt", "website", "linkedin"]
-    #testEmailColArr = [20,21]
     testEmailColArr = [ "email", "email_alt"]
     fullName_col = 'name_full'
-  elsif user_type == 'tdsb'
+  elsif data_type == 'tdsb'
     fullName_col = 'name_full'
-  #  testColArr = [13, 14, 15 ]
     testColArr = [  "website", "facebook", "twitter"]
     testEmailColArr = ["email", "email_alt"]
   else
@@ -60,7 +57,6 @@ def testUser(user_row, user_type, row_num, verbose)
 end
 
 def isUserColumnValueURLError?(user_row, col_num, verbose )
- # puts "verbose=#{verbose}"
 
   get_value_to_test = user_row[col_num]
 
@@ -77,8 +73,6 @@ end
 
 
 def fetch(uri_str, limit = 10, verbose)
- # puts "fetch verbose=#{verbose}"
-
 
   debug = false # or true to see various extra noise
 
@@ -171,6 +165,25 @@ def validateCsvHeader(headerRow, file_type)
 
 end
 
+def runOnRow?(rowIndex, listArr, skipArr )
+
+  if ! (listArr || skipArr) #neither list or skip or set then do run row
+    return true
+  elsif skipArr && skipArr.include?(rowIndex) #if its in the skip  arrary then do not run row
+    return false
+  elsif listArr && listArr.include?(rowIndex) #if it in the list array then do run row
+      return true
+  elsif listArr && !listArr.include?(rowIndex) #if doing lists and not in the list array then do not run row
+    return false
+  else
+      return true
+  end
+
+end
+
+
+##>> Main starts here>>
+
 start = Time.now
 
 options = {}
@@ -192,7 +205,7 @@ OptionParser.new do |opts|
     options[:list] =  l
   end
 
-  opts.on("-s", "--skip 3,17,123", Array, "skip row numbers listed (known to be trouble or blown-y)") do |l|
+  opts.on("-s", "--skip 3,17,123", Array, "skip row numbers listed (known to be trouble or blownup-y)") do |l|
     options[:skip] =  l
   end
 
@@ -261,16 +274,7 @@ csv = CSV.read(filename, headers:true)
 csv.each_with_index do |row, index |
   #puts "#{index} #{row['name_full']}  #{row[22]} "
 
-
-  if ! (options[:list] || options[:skip]) #neither list or skip or set then do run row
-    runOnRow = true
-  elsif options[:skip] && options[:skip].include?(index) #if its in the skip  arrary then do not run row
-    runOnRow = false
-  elsif options[:list] && options[:list].include?(index) #if it in the list array then do run row
-      runOnRow = true
-  else
-      runOnRow = true
-  end
+  runOnRow = runOnRow?(index, options[:list], options[:skip])
   puts "\nSkipping row #{index + CSV_ROW_OFFSET} for #{row['name_full']} " if ((!runOnRow) && options[:verbose] )
 
   print "=" if runOnRow
