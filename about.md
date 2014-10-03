@@ -55,4 +55,22 @@ People have [helped out](/get-involved) by sending us tips, information, or flye
 * Thanks to Don Stuart for an update to the Don Stuart page.
 * Thanks to William Dale for an update to the Gaye Dale page.
 * Thanks to Genevieve Tran for some great web site improvement ideas.
-
+* Thanks to candidate Carmen Kedzior for an update
+* Thanks to candidate Thomas Gallezot for an update
+* Thanks to candidate Peggy Moulder for an update
+* Thanks to candidate Liz West for an update
+* Thanks again to Mary Cruden for helping to track down school trustee candidate e-mail addresses
+* Thanks to candidate Alex Perez for an update 
+* Thanks to candidate Doug Cronkite for an update
+* Thanks to candidate Ashley Sondhi for an update
+* Thanks to candidate Khaliq Mahmood for an update
+* Thanks to Shawna Teper for an update to Shelley Carroll's profile
+* Thanks to Derek Power for an update to Derek Power
+* Thanks to candidate Princess Boucher for an update
+* Thanks to candidate David Blackmore for an update
+* Thanks to Monica Henao for an update to Alonzo Bartley profile
+* Thanks to Ken Miura for an update to Terri Chu's profile
+* Thanks to candidate Maria Remerata-Garcia for an update
+* Thanks to candidate Jordan Stone for an update
+* Thanks to candidate Nikola Samac for an update
+* Thanks to candidate Jennifer McKelvie for an update
