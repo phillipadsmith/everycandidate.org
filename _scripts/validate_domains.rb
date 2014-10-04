@@ -5,7 +5,10 @@ require 'optparse'
 
 CSV_ROW_OFFSET = 2 #the first row of users is the 2 row in the csv file, but the  [0] part of the array
 
-
+## preload with known good and common email domains
+VAILD_EMAIL_DOMAINS = ['gmail.com', 'yahoo.ca', 'yahoo.com', 'hotmail.com', 'aol.com',
+ 'sympatico.ca', 'rogers.com','rogers.ca', 'outlook.com','live.ca','live.com','bell.net',
+ 'msn.com']
 
 
 def testUser(user_row, data_type, row_num, verbose)
@@ -26,10 +29,15 @@ def testUser(user_row, data_type, row_num, verbose)
   end
   errorArr = []
 
-#  testColArr.each do  |column_value|
+
+
+
+
+
   testColArr.map do  |column_value|
     unless user_row[column_value] == nil
-#      puts "#{user_row[fullName_col]} ERROR #{isUserColumnValueURLError?(user_row,column_value, verbose)} for #{user_row[column_value]}"
+#      puts "#{user_row[fullName_col]}  #{isUserColumnValueURLError?(user_row,column_value, verbose)} for #{user_row[column_value]}" if verbose
+
       errorArr.push(user_row[column_value]) if isUserColumnValueURLError?(user_row, column_value, verbose)
 
       if verbose && errorArr.include?(user_row[column_value])
@@ -41,17 +49,71 @@ def testUser(user_row, data_type, row_num, verbose)
     end
   end
 
+
+
+
+
+
+  testEmailColArr.map do |column_value|
+
+    unless user_row[column_value] == nil
+      puts "\nTESTING email of #{user_row[fullName_col]}  for #{user_row[column_value]}" if verbose
+
+      if isVaildEmailStructure?(user_row[column_value])
+        # check the domain of the email is good
+        emailDomain = user_row[column_value].split('@')[1]
+        #puts "emailDomain=#{emailDomain}"
+
+        errorArr.push(user_row[column_value]) unless isVailsEmailDomain?(emailDomain, verbose)
+
+
+
+      else
+        errorArr.push(user_row[column_value])
+      end
+
+      if verbose && errorArr.include?(user_row[column_value])
+        print "\nemail Looks BAD : #{user_row[fullName_col]} for #{user_row[column_value]}"
+      elsif verbose
+        print "\nemail Looks GOOD : #{user_row[fullName_col]} for #{user_row[column_value]}"
+      end
+
+    end
+  end
+
+
+
+
+
   print "\n #{errorArr.length} Error(s) found for #{user_row[fullName_col]} on file row #{row_num + CSV_ROW_OFFSET} >>" if  errorArr.length > 0
   errorArr.each do |error|
      print "\t#{error}"
   end
   print "\n" if  errorArr.length > 0
 
-  print "\nAll Good for #{user_row[fullName_col]} on file row #{row_num + CSV_ROW_OFFSET} >>"  if verbose && errorArr.length == 0
+  print "\nAll Good for #{user_row[fullName_col]} on file row #{row_num + CSV_ROW_OFFSET} >>\n"  if verbose && errorArr.length == 0
 
 
 
   return errorArr.length
+
+
+end
+
+def isVailsEmailDomain?(emailDomain, verbose)
+
+  emailDomain.downcase!
+
+  return true if VAILD_EMAIL_DOMAINS.include?( emailDomain )
+
+  puts "testing new email Domain=#{emailDomain}" if verbose
+
+  if !fetch(emailDomain.gsub(/\s+/, ""), verbose)
+    return false
+  else
+    VAILD_EMAIL_DOMAINS.push(emailDomain)
+    return true
+  end
 
 
 end
@@ -165,6 +227,14 @@ def validateCsvHeader(headerRow, file_type)
 
 end
 
+# is the email address a string of vaild strtucture
+def isVaildEmailStructure?(emailStr)
+  #a simple regexp that requires only string@string.string
+  email_regexp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+  return (emailStr =~ email_regexp )
+end
+
+
 def runOnRow?(rowIndex, listArr, skipArr )
 
   if ! (listArr || skipArr) #neither list or skip or set then do run row
@@ -275,7 +345,7 @@ csv.each_with_index do |row, index |
   #puts "#{index} #{row['name_full']}  #{row[22]} "
 
   runOnRow = runOnRow?(index, options[:list], options[:skip])
-  puts "\nSkipping row #{index + CSV_ROW_OFFSET} for #{row['name_full']} " if ((!runOnRow) && options[:verbose] )
+  puts "Skipping row #{index + CSV_ROW_OFFSET} for #{row['name_full']} " if ((!runOnRow) && options[:verbose] && !options[:list]  )
 
   print "=" if runOnRow
 #  err_count += testUser(row, data_type, index, options[:verbose]) if !options[:list] || options[:list].include?(index)
@@ -293,4 +363,6 @@ row_num -= options[:skip].length if options[:skip]
 
 print "\nDONE : #{row_num} file users examined; #{err_count} ERRORS Found in #{data_type} file #{filename}\n"
 puts "Duration: #{Time.now - start} seconds"
+
+puts  "#{VAILD_EMAIL_DOMAINS}"
 
