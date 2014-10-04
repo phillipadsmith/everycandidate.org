@@ -78,4 +78,28 @@ People have [helped out](/get-involved) by sending us tips, information, or flye
 * Thanks to candidate Ted Bustamante for an update
 * Thanks to candidate Albina Burello for an update
 * Thanks to candidate Raymond Cho for an update
-
+* Thanks to candidate Everett Sheppard for an update
+* Thanks to Michael Black for an update to Albert Koehl's profile
+* Thanks to candidate Guy Bowie for an update
+* Thanks to candidate Dave Andre for an update
+* Thanks to candidate Stephen Holyday for an update
+* Thanks to candidate Wasim Vania for an update
+* Thanks to candidate Saeed Selvam for an update
+* Thanks to Diego Rodriguez for an update to Charles Macdonald's profile
+* Thanks to candidate Larry Perlman for an update
+* Thanks to candidate Eduardo Harari for an update
+* Thanks to candidate Janet Davis for an update
+* Thanks to candidate Paul Bell for an update
+* Thanks to candidate David Mousavi for an update
+* Thanks to candidate Christin Carmichael Greb for an update
+* Thanks to candidate Taras Kulish for an update
+* Thanks to candidate Mike Andreae for an update
+* Thanks to candidate Tiffany Ford for an update
+* Thanks to candidate Tony Vella for an update
+* Thanks to candidate Gordon Foster for an update
+* Thanks to candidate Richard Klagsbrun for an update
+* Thanks to candidate Noel Kent for an update
+* Thanks to candidate Kristian Chartier for an update
+* Thanks to candidate Anna Sajnovic for an update
+* Thanks to candidate Sheila Cary-Meagher for an update
+* Thanks to candidate Shelley Laskin for an update0

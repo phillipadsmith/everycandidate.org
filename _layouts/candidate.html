@@ -35,9 +35,7 @@ layout: default
     <dl>
         <dt>Phone Numbers</dt>
     {% if candidate.phone %}<dd>{{ candidate.phone }}</dd>{% endif %}
-    {% if candidate.phone_home %}<dd>{{ candidate.phone_home }}</dd>{% endif %}
     {% if candidate.phone_campaign_office %}<dd>{{ candidate.phone_campaign_office }}</dd>{% endif %}
-    {% if candidate.phone_cell %}<dd>{{ candidate.phone_cell }}</dd>{% endif %}
     {% if candidate.phone == nil %}
     <p>If doesn't look like there are any phone numbers on file for {{ page.name }} yet. Why don't you consider <a href="mailto:{{ site.author.email }}">sending us one</a>?</p>
     {% endif %}
@@ -46,7 +44,9 @@ layout: default
 
         <dt>E-mail addresses</dt>
 {% if candidate.email %}<dd><a href="mailto:{{ candidate.email }}">{{ candidate.email }}</a></dd>{% endif %}
-{% if candidate.email_alt %}<dd><a href="mailto:{{ candidate.email_alt }}">{{ candidate.email_alt }}</a></dd>{% endif %}
+{% if candidate.email == nil %}
+<p>If doesn't look like there's an e-mail address on file for {{ page.name }} yet. Why don't you consider <a href="mailto:{{ site.author.email }}">sending us one</a>?</p>
+{% endif %}
 
         <dt>Links</dt>
 {% if candidate.website %}<dd><a title="Web site for {{ page.name }}" href="{{ candidate.website }}">{{ candidate.website }}</a></dd>{% endif %}
@@ -60,7 +60,7 @@ layout: default
     <img src="/public/img/position-primer-logo.png" style="float: left; padding: 0 10px 10px 0;">
     <p>For a bite-sized view of <strong>candidate positions</strong> on 10 important issues for Toronto, please visit the <a href="http://positionprimer.ca/html/ward_{{ page.ward }}.html">Ward {{ page.ward }}</a> page on the excellent <a href="http://positionprimer.ca">Position Primer web site</a></p>
     {% if candidate.tcat_link != '#N/A' %}
-        {% if candidate.tcat_link != '' %}
+        {% if candidate.tcat_link != nil %}
     <br />
     <p>
     Find out how <a href="{{ candidate.tcat_link }}">{{ page.name }} responded to the Toronto Centre for Active Transportation (TCAT) survey</a>. The survey asks for candidate's views on "active transportation issues and about the concrete steps that can be taken to improve cycling and walking in Toronto." 
