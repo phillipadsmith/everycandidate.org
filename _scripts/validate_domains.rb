@@ -11,7 +11,12 @@ VAILD_EMAIL_DOMAINS = ['gmail.com', 'yahoo.ca', 'yahoo.com', 'hotmail.com', 'aol
  'msn.com']
 
 
-def testUser(user_row, data_type, row_num, verbose)
+def testUser(user_row, data_type, row_num, verbose, checkType)
+  # user_row is the hash of user data
+  # data_type is this a council or a tdsb user
+  # row_num what row is this in the csv file (so it can be found)
+  # verbose boollean wheater to do more detailed output
+  # checkType all|url|mail want are we going to check?
 
   testColArr =[]
   testEmailColArr = []
@@ -30,57 +35,59 @@ def testUser(user_row, data_type, row_num, verbose)
   errorArr = []
 
 
+  if checkType == 'all' || checkType == 'url'
 
 
+    testColArr.map do  |column_value|
+      unless user_row[column_value] == nil
 
 
-  testColArr.map do  |column_value|
-    unless user_row[column_value] == nil
-#      puts "#{user_row[fullName_col]}  #{isUserColumnValueURLError?(user_row,column_value, verbose)} for #{user_row[column_value]}" if verbose
+        puts "\nTESTING url of #{user_row[fullName_col]} (row #{row_num + CSV_ROW_OFFSET}) for #{user_row[column_value]}" if verbose
 
-      errorArr.push(user_row[column_value]) if isUserColumnValueURLError?(user_row, column_value, verbose)
+        errorArr.push(user_row[column_value]) if isUserColumnValueURLError?(user_row, column_value, verbose)
 
-      if verbose && errorArr.include?(user_row[column_value])
-        print "\nLooks BAD : #{user_row[fullName_col]} for #{user_row[column_value]}"
-      elsif verbose
-        print "\nLooks GOOD : #{user_row[fullName_col]} for #{user_row[column_value]}"
+        if verbose && errorArr.include?(user_row[column_value])
+          puts "url Looks BAD : #{user_row[fullName_col]} for #{user_row[column_value]}"
+        elsif verbose
+          puts "url Looks GOOD : #{user_row[fullName_col]} for #{user_row[column_value]}"
+        end
+
       end
-
     end
+
   end
 
 
 
+  if checkType == 'all' || checkType == 'mail'
 
 
+    testEmailColArr.map do |column_value|
 
-  testEmailColArr.map do |column_value|
+      unless user_row[column_value] == nil
+        puts "\nTESTING email of #{user_row[fullName_col]} (row #{row_num + CSV_ROW_OFFSET}) for #{user_row[column_value]}" if verbose
 
-    unless user_row[column_value] == nil
-      puts "\nTESTING email of #{user_row[fullName_col]}  for #{user_row[column_value]}" if verbose
+        if isVaildEmailStructure?(user_row[column_value])
+          # check the domain of the email is good
+          emailDomain = user_row[column_value].split('@')[1]
+          #puts "emailDomain=#{emailDomain}"
 
-      if isVaildEmailStructure?(user_row[column_value])
-        # check the domain of the email is good
-        emailDomain = user_row[column_value].split('@')[1]
-        #puts "emailDomain=#{emailDomain}"
+          errorArr.push(user_row[column_value]) unless isVailsEmailDomain?(emailDomain, verbose)
 
-        errorArr.push(user_row[column_value]) unless isVailsEmailDomain?(emailDomain, verbose)
+        else
+          errorArr.push(user_row[column_value])
+        end
 
+        if verbose && errorArr.include?(user_row[column_value])
+          puts "email Looks BAD : #{user_row[fullName_col]} for #{user_row[column_value]}"
+        elsif verbose
+          puts "email Looks GOOD : #{user_row[fullName_col]} for #{user_row[column_value]}"
+        end
 
-
-      else
-        errorArr.push(user_row[column_value])
       end
-
-      if verbose && errorArr.include?(user_row[column_value])
-        print "\nemail Looks BAD : #{user_row[fullName_col]} for #{user_row[column_value]}"
-      elsif verbose
-        print "\nemail Looks GOOD : #{user_row[fullName_col]} for #{user_row[column_value]}"
-      end
-
     end
-  end
 
+  end
 
 
 
@@ -91,7 +98,7 @@ def testUser(user_row, data_type, row_num, verbose)
   end
   print "\n" if  errorArr.length > 0
 
-  print "\nAll Good for #{user_row[fullName_col]} on file row #{row_num + CSV_ROW_OFFSET} >>\n"  if verbose && errorArr.length == 0
+  puts "All Good for #{user_row[fullName_col]} on file row #{row_num + CSV_ROW_OFFSET} >>\n"  if verbose && errorArr.length == 0
 
 
 
@@ -99,6 +106,9 @@ def testUser(user_row, data_type, row_num, verbose)
 
 
 end
+
+
+
 
 def isVailsEmailDomain?(emailDomain, verbose)
 
@@ -279,6 +289,15 @@ OptionParser.new do |opts|
     options[:skip] =  l
   end
 
+  opts.on("-m", "--mail", "only run email checks on users") do |l|
+    options[:mail] =  l
+  end
+
+  opts.on("-u", "--url", "only run url checks on users") do |l|
+    options[:url] =  l
+  end
+
+
   # This displays the help screen, all programs are assumed to have this option.
   opts.on( '-h', '--help', 'Display this screen' ) do
     puts opts
@@ -289,6 +308,7 @@ end.parse!
 
 # puts "list = #{options[:list]}"
 # puts "skip = #{options[:skip]}"
+
 
 data_type = ARGV.pop
 
@@ -302,6 +322,19 @@ options[:list].map!(&:to_i).sort!.map!{|i| i - CSV_ROW_OFFSET} if options[:list]
 options[:skip].map!(&:to_i).sort!.map!{|i| i - CSV_ROW_OFFSET} if options[:skip]
 #remove skip from list, just in case
 options[:list] = options[:list] - options[:skip] if options[:skip] &&  options[:list]
+
+#puts "options[:mail]=#{options[:mail]}"
+#puts "options[:url]=#{options[:url]}"
+if (options[:mail] && options[:url] ) || (!options[:mail] && !options[:url] )
+  checkType = "all"
+elsif options[:mail] && !options[:url]
+  checkType = "mail"
+elsif !options[:mail] && options[:url]
+  checkType = "url"
+end
+#puts  "checkType=#{checkType}"
+
+
 
 # puts "list = #{options[:list]}"
 # puts "skip = #{options[:skip]}"
@@ -348,8 +381,8 @@ csv.each_with_index do |row, index |
   puts "Skipping row #{index + CSV_ROW_OFFSET} for #{row['name_full']} " if ((!runOnRow) && options[:verbose] && !options[:list]  )
 
   print "=" if runOnRow
-#  err_count += testUser(row, data_type, index, options[:verbose]) if !options[:list] || options[:list].include?(index)
-  err_count += testUser(row, data_type, index, options[:verbose]) if runOnRow
+#  err_count += testUser(row, data_type, index, options[:verbose], checkType) if !options[:list] || options[:list].include?(index)
+  err_count += testUser(row, data_type, index, options[:verbose], checkType) if runOnRow
 
 
 
@@ -361,8 +394,15 @@ end
 row_num = options[:list].length if options[:list]
 row_num -= options[:skip].length if options[:skip]
 
-print "\nDONE : #{row_num} file users examined; #{err_count} ERRORS Found in #{data_type} file #{filename}\n"
+puts  "VAILD_EMAIL_DOMAINS collected #{VAILD_EMAIL_DOMAINS}" if  options[:verbose]
+print "\nDONE : #{row_num} file user(s) "
+
+print "had thier url's examined;"  if checkType == 'url'
+print "had thier email addresses examined;" if checkType == 'mail'
+print "were examined (url's and email addresses);" if checkType == 'all'
+
+print " #{err_count} ERRORS Found in #{data_type} file #{filename}\n"
 puts "Duration: #{Time.now - start} seconds"
 
-puts  "#{VAILD_EMAIL_DOMAINS}"
+
 
