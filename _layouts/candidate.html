@@ -6,6 +6,10 @@ layout: default
 {% for candidate in site.data.toronto_council %}
 {% if candidate.candidate_id == page.id %}
 
+{% if candidate.twitter_profile_photo %}
+<img class="candidate-twitter-photo" src="{{ candidate.twitter_profile_photo | replace: "_normal", "_200x200" }}" alt="Photo of {{ page.name }} from Twitter" />
+{% endif %}
+
 {% if candidate.incumbent %}
 <p class="incumbent">{{ page.name }} is currently the incumbent in <a href="/wards/#{{ page.ward }}">ward {{ page.ward }}</a>.</p>
 {% endif %}
@@ -53,15 +57,15 @@ layout: default
     {% if candidate.linkedin %}<dd><a title="LinkedIn for {{ page.name }}" href="{{ candidate.linkedin }}">{{ page.name}} on LinkedIn</a></dd>{% endif %}
     {% if candidate.twitter %}<dd><a title="{{ page.name }} on Twitter" href="{{ candidate.twitter }}">{{ page.name}} on Twitter</a></dd>{% endif %}
     {% if candidate.facebook %}<dd><a title="Facebook for {{ page.name }}" href="{{ candidate.facebook }}">{{ page.name}} on Facebook</a></dd>{% endif %}
-    {% if candidate.misc %}<dd>Misc: {{ candidate.misc }}</dd>{% endif %}
+    {% if candidate.misc %}<dd>Other links: {{ candidate.misc }}</dd>{% endif %}
     </dl>
     <p>Is there information missing for this candidate? Would you mind <a href="mailto:{{ site.author.email }}">dropping us a line</a>? It only takes a minute and earns you a spot in our <a href="/about/#contributors">hall of fame</a>.</p>
     <br />
     <img src="/public/img/position-primer-logo.png" style="float: left; padding: 0 10px 10px 0;">
     <p>For a bite-sized view of <strong>candidate positions</strong> on 10 important issues for Toronto, please visit the <a href="http://positionprimer.ca/html/ward_{{ page.ward }}.html">Ward {{ page.ward }}</a> page on the excellent <a href="http://positionprimer.ca">Position Primer web site</a></p>
+    <br />
     {% if candidate.tcat_link != '#N/A' %}
         {% if candidate.tcat_link != nil %}
-    <br />
     <p>
     Find out how <a href="{{ candidate.tcat_link }}">{{ page.name }} responded to the Toronto Centre for Active Transportation (TCAT) survey</a>. The survey asks for candidate's views on "active transportation issues and about the concrete steps that can be taken to improve cycling and walking in Toronto." 
     </p>
@@ -70,4 +74,13 @@ layout: default
     <p>
 {% endif %}
 {% endfor %}
+<hr />
+        <h2>Candidates running in ward {{ page.ward }}</h2>
+        <ul>
+{% for candidate in site.data.toronto_council %}
+{% if candidate.ward == page.ward %}
+    <li><a title="Information on Toronto ward {{ page.ward }} city council candidate {{ candidate.name_full }}" href="/toronto-city-council/{{ candidate.slug }}">{{ candidate.name_full }}</a> {% if candidate.incumbent == 'yes' %}(Incumbent){% endif %}</li>
+{% endif %}
+{% endfor %}
+        </ul>
 </div>

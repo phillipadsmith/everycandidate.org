@@ -74,6 +74,13 @@ h3.masthead-title {
     margin-bottom: 1rem;
 }
 
+.candidate-twitter-photo {
+    float: right;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
 /* ==========================================================================
 Progressively enhance for larger screens 
 ========================================================================== */

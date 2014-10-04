@@ -6,11 +6,33 @@ layout: default
 {% for candidate in site.data.toronto_school_board %}
 {% if candidate.candidate_id == page.id %}
 
+{% if candidate.twitter_profile_photo %}
+<img class="candidate-twitter-photo" src="{{ candidate.twitter_profile_photo | replace: "_normal", "_200x200" }}" alt="Photo of {{ page.name }} from Twitter" />
+{% endif %}
+
 {% if candidate.incumbent == 'yes' %}
 <p class="incumbent">{{ page.name }} is currently the incumbent in <a href="/wards#school-{{ page.ward }}">ward {{ page.ward }}</a>.</p>
 {% endif %}
 
 <p>The candidate for Toronto District School Board trustee, {{ page.name}}, registered to run in <a href="/wards#school-{{ page.ward }}">ward {{ page.ward }}</a> on {{ candidate.nomination_date_nice }}.</p>
+
+{% if candidate.ran_2010 %}
+    <p><i class="fa fa-bullhorn fa-border"></i> Someone with the name {{ page.name }} ran in the 2010 municipal election.
+{% endif %}
+{% if candidate.ran_2006 %}
+    <p><i class="fa fa-bullhorn fa-border"></i> Someone with the name {{ page.name }} ran in the 2006 municipal election.
+{% endif %}
+
+{% if candidate.contribute_2010 %}
+<p><i class="fa fa-usd fa-border"></i> Someone with the name {{ page.name }} contributed ${{ candidate.contribute_2010 }} in the 2010 election.</p>
+{% endif %}
+{% if candidate.contribute_2006 %}
+<p><i class="fa fa-usd fa-border"></i> Someone with the name {{ page.name }} contributed ${{ candidate.contribute_2006 }} in the 2006 election.</p>
+{% endif %}
+
+{% if candidate.lobbyist_registry %}
+    <p class="lobbyist"><i class="fa fa-briefcase"></i> Someone with the name {{ page.name }} appears in the lobbyist registry listed as a "{{ candidate.lobbyist_registry }}."</p>
+{% endif %}
 
     <p>Here is the other information currently on on file for {{ page.name }}:</p>
 
@@ -35,9 +57,18 @@ layout: default
     {% if candidate.linkedin %}<dd><a title="LinkedIn for {{ page.name }}" href="{{ candidate.linkedin }}">{{ page.name}} on LinkedIn</a></dd>{% endif %}
     {% if candidate.twitter %}<dd><a title="{{ page.name }} on Twitter" href="{{ candidate.twitter }}">{{ page.name}} on Twitter</a></dd>{% endif %}
     {% if candidate.facebook %}<dd><a title="Facebook for {{ page.name }}" href="{{ candidate.facebook }}">{{ page.name}} on Facebook</a></dd>{% endif %}
-    {% if candidate.misc %}<dd>Misc: {{ candidate.misc }}</dd>{% endif %}
+    {% if candidate.misc %}<dd>Other links: {{ candidate.misc }}</dd>{% endif %}
     </dl>
     <p>Is there information missing for this candidate? Would you mind <a href="mailto:{{ site.author.email }}">dropping us a line</a>? It only takes a minute and earns you a spot in our <a href="/about/#contributors">hall of fame</a>.</p>
 {% endif %}
 {% endfor %}
+<hr />
+        <h2>Candidates running in school ward {{ page.ward }}</h2>
+        <ul>
+{% for candidate in site.data.toronto_school_board %}
+{% if candidate.school_ward == page.ward %}
+    <li><a title="Information on TDSB school ward {{ page.ward }} trustee candidate {{ candidate.name_full }}" href="/toronto-school-board/{{ candidate.slug }}">{{ candidate.name_full }}</a> {% if candidate.incumbent == 'yes' %}(Incumbent){% endif %}</li>
+{% endif %}
+{% endfor %}
+        </ul>
 </div>
