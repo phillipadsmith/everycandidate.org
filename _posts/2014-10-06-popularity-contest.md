@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "A first look at more than 50 Toronto District School Board candidates"
+title: "A first look at more than 40 Toronto District School Board candidates"
 date: 2014-10-06 9:25:00 # This is used in place of the filename
 ---
 
-<p>We've collected every Toronto District School Board candidate's Twitter profile photo that we could find so you don't have to visit 50+ separate websites to get a sense of who is running.</p>
+<p>We've collected every Toronto District School Board candidate's Twitter profile photo that we could find so you don't have to visit 40+ separate websites to get a sense of who is running.</p>
 
 <p>For the first time all the TDSB candidates Twitter profile photos on one page. Drop us a note in the comment section below and let us know what it says to you.</p>
 
