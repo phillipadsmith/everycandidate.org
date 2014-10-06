@@ -12,24 +12,4 @@ Just a quick reminder: Every Candidate is a [100% open-source](/data) & [citizen
 
 If you can contribute even 5 minutes of your time -- and all the tasks are easy, trust us! -- please take a look at our [get involved page](/get-involved/).
 
-Here's a quick rundown of the most recent updates:
-
-## City council candidate updates
-
-{% assign candidatessource = site.data.toronto_council | sort: 'name_last_lower' %}
-{% for candidate in candidatessource %}
-{% if candidate.updated %}
-* [{{ candidate.name_full }}](/toronto-city-council/{{ candidate.slug }}), [Ward {{ candidate.ward }}](/wards/#{{ candidate.ward }}) 
-{% endif %}
-{% endfor %}
-
-## TDSB trustee candidate updates
-
-{% assign candidatessource = site.data.toronto_school_board | sort: 'name_last_lower' %}
-{% for candidate in candidatessource %}
-{% if candidate.updated %}
-* [{{ candidate.name_full }}](/toronto-school-board/{{ candidate.slug }}), [Ward {{ candidate.school_ward }}](/wards/#school-{{ candidate.school_ward }}) 
-{% endif %}
-{% endfor %}
-
 **If you find this information useful, please consider [getting involved](/get-involved). It only takes a few minutes to help!**
