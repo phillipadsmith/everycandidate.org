@@ -103,3 +103,6 @@ People have [helped out](/get-involved) by sending us tips, information, or flye
 * Thanks to candidate Anna Sajnovic for an update
 * Thanks to candidate Sheila Cary-Meagher for an update
 * Thanks to candidate Shelley Laskin for an update0
+* Thanks to candidate Luke LaRocque for an update
+
+
