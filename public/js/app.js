@@ -84,7 +84,7 @@ function districts_for_geocoder_result(result) {
 $(document).ready(function() 
     { 
         $('#popularity').tablesorter({
-            sortList: [[1,0],[4,1]]
+            sortList: [[1,0],[3,1]]
         }); 
         $('.sortable').tablesorter({
 
