@@ -4,6 +4,15 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
+exclude:
+  - README.md
+  - bower.json
+  - package.json
+  - node_modules
+  - bower_components
+  - Gruntfile.js
+  - gemfile
+  - Gemfile.lock
 
 # Setup
 title:            "Every Candidate"
