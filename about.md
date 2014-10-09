@@ -104,5 +104,11 @@ People have [helped out](/get-involved) by sending us tips, information, or flye
 * Thanks to candidate Sheila Cary-Meagher for an update
 * Thanks to candidate Shelley Laskin for an update0
 * Thanks to candidate Luke LaRocque for an update
-
-
+* Thanks to candidate Don Hedrick for an update
+* Thanks to candidate Michael Opoku for an update
+* Thanks to candidate Maria Saras-Voutsinas for an update
+* Thanks to candidate Aaron Grinhaus for an update
+* Thanks to candidate Sabrina Zuniga for an update
+* Thanks to candidate Rhonda Sussman for an update
+* Thanks to candidate Mark Henick for an update
+* Thanks to Tania Haas & Simon Loffler for sending in several flyers
