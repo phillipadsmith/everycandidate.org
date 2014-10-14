@@ -11,13 +11,13 @@ layout: default
 {% endif %}
 
 {% if candidate.incumbent %}
-<p class="incumbent">{{ page.name }} is currently the incumbent in <a href="/wards/#{{ page.ward }}">ward {{ page.ward }}</a>.</p>
+<p class="incumbent">{{ page.name }} is currently the incumbent in <a href="/wards/#{{ page.ward }}">Ward {{ page.ward }}</a>.</p>
 {% endif %}
 
-<p>The candidate for Toronto city council, {{ page.name}}, registered to run in <a href="/wards/#{{ page.ward }}">ward {{ page.ward }}</a> on {{candidate.nomination_date }}.</p>
+<p>The candidate for Toronto city council, {{ page.name}}, registered to run in <a href="/wards/#{{ page.ward }}">Ward {{ page.ward }}</a> on {{candidate.nomination_date }}.</p>
 
 {% if candidate.live_in_ward != 'TRUE' %}
-<p class="notinward"><i class="fa fa-map-marker"></i> This candidate's nomination papers indicate that they live <strong>{{ candidate.Km }} kilometres outside</strong> of <a href="/wards/#{{ page.ward }}">ward {{ page.ward }}</a> in {{ candidate.home_ward }}.</p>
+<p class="notinward"><i class="fa fa-map-marker"></i> This candidate's nomination papers indicate that they live <strong>{{ candidate.Km }} kilometres outside</strong> of <a href="/wards/#{{ page.ward }}">Ward {{ page.ward }}</a> in Ward {{ candidate.home_ward }}.</p>
 {% else %}
 <p class="inward"><i class="fa fa-map-marker"></i> This candidate's nomination papers indicate that they live in <a href="/wards/#{{ page.ward }}">ward {{ page.ward }}</a>.</p>
 {% endif %}
