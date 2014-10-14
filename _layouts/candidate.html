@@ -17,7 +17,7 @@ layout: default
 <p>The candidate for Toronto city council, {{ page.name}}, registered to run in <a href="/wards/#{{ page.ward }}">ward {{ page.ward }}</a> on {{candidate.nomination_date }}.</p>
 
 {% if candidate.live_in_ward != 'TRUE' %}
-<p class="notinward"><i class="fa fa-map-marker"></i> This candidate's nomination papers indicate that they live {{ candidate.Km }} outside of <a href="/wards/#{{ page.ward }}">ward {{ page.ward }}</a>.</p>
+<p class="notinward"><i class="fa fa-map-marker"></i> This candidate's nomination papers indicate that they live {{ candidate.Km }} kilometres outside of <a href="/wards/#{{ page.ward }}">ward {{ page.ward }}</a>.</p>
 {% endif %}
 
 {% if candidate.ran_2010 %}
