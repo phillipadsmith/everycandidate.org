@@ -38,9 +38,9 @@ Wong-Tam lives only a few blocks from the ward she represents, but other candida
 
 “I live downtown in a condo, but don't feel connected to that area”, said Ai. He grew up in North York's [Ward 24](/toronto-ward/willowdale-24/), where he is a candidate. He doesn't foresee a problem closing the more than 12 kilometre distance.
 
-“I would be a five-minute walk from city hall, and I would visit the ward as often as possible. It is only a 25-minute drive away, if the DVP is empty,” Ai added. "When is the DVP empty?" would have been a wonderful follow-up question says an Every Candidate volunteer copy editor.
+“I would be a five-minute walk from city hall, and I would visit the ward as often as possible. It is only a 25-minute drive away, if the DVP is empty,” Ai added.
 
-The candidate who is running the farthest from home is [Amarjeet Chhabra](http://everycandidate.org/toronto-city-council/amarjeet-chhabra-2144/), who lives downtown but is vying for a seat in Scarborough's [Ward 44](http://everycandidate.org/toronto-ward/scarborough-east-44/), over 19 kilometres away, further than the distance between the lake shore and the northern city limits. Home is where the heart is? 
+The candidate who is running the farthest from home is [Amarjeet Chhabra](http://everycandidate.org/toronto-city-council/amarjeet-chhabra-2144/), who lives downtown but is vying for a seat in Scarborough's [Ward 44](http://everycandidate.org/toronto-ward/scarborough-east-44/), over 19 kilometres away, further than the distance between the lake shore and the northern city limits.
 
 Not all cities in Ontario operate in the same manner as Toronto. The City of Markham, for example, elects not only a mayor and a councillor to represent each of the city's eight wards, but also elects four regional councillors to serve the city as a whole.
 
