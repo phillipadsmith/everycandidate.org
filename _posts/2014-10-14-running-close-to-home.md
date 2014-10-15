@@ -4,6 +4,7 @@ title: "More than 30% of candidates live outside the ward they are running in"
 date: 2014-10-14 10:25:00 # This is used in place of the filename
 ---
 
+<img src="/public/img/11km_Map.png" alt="11Km, the distrance from the CNE to the 401"/><br />
 [Deputy Mayor Norm Kelly](/toronto-city-council/norm-kelly-2039/) is running for re-election in [Ward 40](http://everycandidate.org/toronto-ward/scarborough-agincourt-40/), but lives in a different part of Scarborough, almost 11 kilometres away, the distance between the C.N.E. and Highway 401. However [none of the candidates running against Kelly live in the ward either](/toronto-ward/scarborough-agincourt-40/).
 
 Out of 358 people competing to become city councillors, 135 of them (38%) registered to run for office using addresses that do not fall within the ward they hope to represent, according to data compiled from their nomination papers.
