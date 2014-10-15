@@ -112,3 +112,5 @@ People have [helped out](/get-involved) by sending us tips, information, or flye
 * Thanks to candidate Rhonda Sussman for an update
 * Thanks to candidate Mark Henick for an update
 * Thanks to Tania Haas & Simon Loffler for sending in several flyers
+* Thanks to candidate Stephen Kazman  for an update
+
