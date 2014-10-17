@@ -112,5 +112,11 @@ People have [helped out](/get-involved) by sending us tips, information, or flye
 * Thanks to candidate Rhonda Sussman for an update
 * Thanks to candidate Mark Henick for an update
 * Thanks to Tania Haas & Simon Loffler for sending in several flyers
-* Thanks to candidate Stephen Kazman  for an update
-
+* Thanks to candidate Stephen Kazman for an update
+* Thanks to candidate Dina Sofia Karzman for an update
+* Thanks to candidate Roxanne Wright for an udpate
+* Thanks to candidate Kasim Dogan for an update
+* Thanks to Markian Silecky for an update to John Moskalyk's info
+* Thanks to Lizz Radman for an update to George Bauk's info
+* Thanks to candidate Ances Hercules for an update
+* Thanks to candidate Franco Ng for an update
