@@ -120,3 +120,5 @@ People have [helped out](/get-involved) by sending us tips, information, or flye
 * Thanks to Lizz Radman for an update to George Bauk's info
 * Thanks to candidate Ances Hercules for an update
 * Thanks to candidate Franco Ng for an update
+* Thanks to candidate Don Hedrick for an update
+* Thanks to candidate Ken Jeffers for an update
