@@ -15,6 +15,8 @@ Toronto reimburses up to 75% of financial contributions given to those running f
 An average of 22% of contributions to elected councillors came from outside of city limits in 2010. Less than a third of the money given to candidates came from their own constituents.
  
 Doug Ford was elected to represent Ward 2, with only 11% percent of the contributions he received came from people who lived in the that same ward. Nonetheless, eight other councillors were elected with a lower percentage of financial support from within their ward. Denzil Minnan-Wong was elected with 5% of his funds coming from his constituents, slightly more than Ana Bailão, who had only 4% of her contributions come from inside the ward she ran in.
+
+Only four candidates were elected with over 60% of their funds coming from inside their ward, not including Doug Holyday, who did not receive a single donation.
  
 Information about who campaign contributions in the 2014 election will not be released until next spring.
 
