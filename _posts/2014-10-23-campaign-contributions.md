@@ -23,3 +23,5 @@ The following chart breaks down of the percentage of campaign contributions rece
 <img src="/public/img/contributions.jpg" />
 
 Note that other councillors also had unknown amounts of contributions, but Mammoliti was the only councillor where the proportion was so significant.
+
+_Research and reporting by Tim Groves_
