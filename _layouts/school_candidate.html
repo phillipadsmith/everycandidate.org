@@ -11,10 +11,10 @@ layout: default
 {% endif %}
 
 {% if candidate.incumbent == 'yes' %}
-<p class="incumbent">{{ page.name }} is currently the incumbent in <a href="/wards#school-{{ page.ward }}">ward {{ page.ward }}</a>.</p>
+<p class="incumbent">{{ page.name }} is currently the incumbent in <a href="/wards/#school-{{ page.ward }}">ward {{ page.ward }}</a>.</p>
 {% endif %}
 
-<p>The candidate for Toronto District School Board trustee, {{ page.name}}, registered to run in <a href="/wards#school-{{ page.ward }}">ward {{ page.ward }}</a> on {{ candidate.nomination_date_nice }}.</p>
+<p>The candidate for Toronto District School Board trustee, {{ page.name}}, registered to run in <a href="/wards/#school-{{ page.ward }}">ward {{ page.ward }}</a> on {{ candidate.nomination_date_nice }}.</p>
 
 {% if candidate.ran_2010 %}
     <p><i class="fa fa-bullhorn fa-border"></i> Someone with the name {{ page.name }} ran in the 2010 election.
