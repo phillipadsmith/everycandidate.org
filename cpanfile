@@ -1,0 +1,14 @@
+requires 'YAML::Tiny', ''; 
+requires 'Text::CSV_XS', '';
+requires 'Mojo::Util', '';
+requires 'Mojo::Template', '';
+requires 'Mojo::Loader', '';
+requires 'Mojo::JSON', '';
+requires 'DateTimeX::Easy', '';
+requires 'Config::JFDI', '';
+requires 'Getopt::Long::Descriptive', '';
+requires 'IO::Socket::SSL', '';
+requires 'Net::Google::DataAPI', '';
+requires 'Net::Google::AuthSub', '';
+requires 'Net::Google::DocumentsList', '';
+requires 'Net::Google::Spreadsheets', '';

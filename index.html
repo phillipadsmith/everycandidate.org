@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <!-- General properties -->
+    <meta name="description" content="Every Candidate: More than just the race for mayor" />
+    <meta name="author" content="Every Candidate">
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="2 days" />
+    <meta name="copyright" content="Copyleft 2014" />
+    <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+    <!-- OpenGraph properties -->
+    <meta property="og:title" content="Home" />
+    <meta property="og:description" content="Every Candidate: More than just the race for mayor" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://everycandidate.org" />
+    <meta property="og:image" content="http://everycandidate.org/public/img/everycandidate_fb.jpg" />
+    <meta property="og:site_name" content="" />
+    <meta property="fb:admins" content="" />
+    <!-- Dublin Core properties -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+    <meta name="DC.title" lang="English" content="Home" />
+    <meta name="DC.creator" content="Every Candidate" />
+    <meta name="DC.description" lang="English" content="Every Candidate: More than just the race for mayor" />
+    <meta name="DC.publisher" content="Every Candidate" />
+    <meta name="DC.format" content="text/html" />
+    <meta name="DC.language" scheme="DCTERMS.URI" content="English" />
+    <!-- /Meta -->
+    <title>
+        
+        Every Candidate &middot; More than just the race for mayor
+        
+    </title>
+
+    <!-- CSS -->
+    <style>
+        /* ==========================================================================
+Print styles.
+Should be inlined to avoid required HTTP connection: h5bp.com/r
+========================================================================== */
+@media print {
+        * {
+            background: transparent !important;
+            color: #000 !important; /* Black prints faster: h5bp.com/s */
+            box-shadow: none !important;
+            text-shadow: none !important;
+        }
+
+        a,
+        a:visited {
+            text-decoration: underline;
+        }
+
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
+
+        abbr[title]:after {
+            content: " (" attr(title) ")";
+        }
+
+        /*
+         * Don't show links for images, or javascript/internal links
+         */
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+  
+    </style>
+    <link rel="stylesheet" href="/public/css/poole.css">
+    <link rel="stylesheet" href="/public/css/syntax.css">
+    <link rel="stylesheet" href="/public/css/lanyon.css">
+    <link rel="stylesheet" href="/public/css/theme.blue.css">
+    <link rel="stylesheet" href="/public/css/everycandidate.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" href="/public/favicon.ico">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-everycandidate">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Every Candidate: More than just the race for mayor</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item active" href="/">Home</a>
+    <a class="sidebar-nav-item" href="/about/">About</a>
+    <a class="sidebar-nav-item" href="/candidates/">Candidates</a>
+    <a class="sidebar-nav-item" href="/wards/">Wards</a>
+    <a class="sidebar-nav-item" href="/data/">Open Data</a>
+    <a class="sidebar-nav-item" href="/get-involved/">Get Involved</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+        <strike>&copy;</strike> 2014. All rights reversed.
+        <br />
+        <span class="version"></a> EveryCandidate.org <a href="https://github.com/phillipadsmith/everycandidate.org/">v1.0.0</a></span>
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+            <a href="/" title="Home"><h3 class="masthead-title">
+            Every Candidate
+          </h3></a>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div id="riding-lookup">
+    <form id="riding-search-mobile" class="riding-search">
+        <span>Search for your city ward by address:</span><br>
+        <input type="text" size="25" placeholder="Street, City." autofocus="">&nbsp;
+        <input type="submit" value="Go"><br>
+        <span id="geolocate-span" style="display:none;">We can also try to <a href="#" id="geolocate-link">automatically find your city ward</a> based on your location.</span> Or you can select from a <a href="/wards/">list of wards</a>.
+    </form>
+    <div id="riding-message-mobile" class="riding-message"></div>
+</div>
+<div id="quick-nav">
+    <ul>
+    <li><a href="/candidates/#toronto-council">Alphabetical list of Toronto City Council Candidates</a></li>
+    <li><a href="/wards/#toronto-wards">Alphabetical list of Toronto Wards</a></li>
+    <li><a href="/candidates/#toronto-school-board">Alphabetical list of Toronto District School Board Candidates</a></li>
+    <li><a href="/wards/#toronto-school-wards">Alphabetical list of Toronto District School Board Wards</a></li>
+    </ul>
+</div>
+    
+<div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/10/27/vote-day/">
+        Voting Day Resources
+      </a>
+    </h1>
+
+    <span class="post-date">27 Oct 2014 | <a href="http://everycandidate.org/2014/10/27/vote-day/#disqus_thread">Comments</a></span>
+
+    <p>Voting day is here. All (two!) of us at Every Candidate hope that you&#39;ll make your voice heard in this election. </p>
+
+<p>Make sure you find out where to vote and what information you might be required to bring on the city&#39;s <a href="http://app.toronto.ca/vote/myVote.do">My Vote</a> site. </p>
+
+<p>Before you head to the poll, take time to review some of the best resources we could find to help guide your decisions today:</p>
+
+<h2>City Council</h2>
+
+<ul>
+<li>Women in Toronto Politics&#39; <a href="http://positionprimer.ca/">Position Primer</a></li>
+<li>Now Toronto&#39;s <a href="http://www.nowtoronto.com/news/story.cfm?content=199508">Ward by ward voters guide</a> </li>
+<li>Choicestorm&#39;s <a href="http://www.choicestorm.com/political/toronto-municipal-election-2014-candidate-list">candidate position reviews</a></li>
+<li>Toronto Environmental Alliance&#39;s <a href="http://www.torontoenvironment.org/vote2014/candidatereportcards">Candidate Report Cards</a></li>
+<li>Toronto Centre for Active Transportation (TCAT) <a href="http://tcat.ca/election_surveys_2014">survey of candidates</a></li>
+<li>Artsvote has <a href="http://www.artsvote.ca/reportcard2014/#grades">report cards for all the wards</a></li>
+<li>Toronto Taxpayers Coalition&#39;s <a href="http://www.torontotaxpayer.ca/category/votersguide/">Voters Guide</a></li>
+</ul>
+
+<h2>School Board</h2>
+
+<ul>
+<li>The Ontario School Boards&#39; Association&#39;s <a href="http://candidates.ontarioschooltrustees.org/en/school-boards-and-trustees.html">Trustee Candidates Guide</a></li>
+<li>Now Toronto&#39;s <a href="http://nowtoronto.com/news/story.cfm?content=200068">coverage of the school board races</a></li>
+<li>Toronto Taxpayers Coalition&#39;s <a href="http://www.torontotaxpayer.ca/category/votersguide/">Voters Guide</a></li>
+</ul>
+
+<p>UPDATES: </p>
+
+<ul>
+<li><a href="http://meslin.wordpress.com/2014/10/26/did-you-ever-have-to-make-up-your-mind/">Dave Meslin has also shared a great list of resources.</a></li>
+</ul>
+
+<p>If you know of a great resource we should add to the list above, <a href="mailto:everycandidate@gmai.com">please drop us a line</a> or <a href="https://twitter.com/EveryCandidate">mention us on Twitter</a>.</p>
+
+<p>Good luck today, Toronto!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/10/23/campaign-contributions/">
+        Councillors short on local financial support
+      </a>
+    </h1>
+
+    <span class="post-date">23 Oct 2014 | <a href="http://everycandidate.org/2014/10/23/campaign-contributions/#disqus_thread">Comments</a></span>
+
+    <p>In the previous municipal election Giorgio Mammoliti was elected to city council with at least 37% of his campaign donations coming from people who live outside of Toronto, according to an analysis of financial records released by the city.</p>
+
+<p>In contrast, only 1% of the money he received came from people who live inside Ward 7, the area he was elected to represent. An additional 11% of his financial contributions were not properly reported and their location could not easily be determined.</p>
+
+<p>Earlier this year the <a href="http://www.cbc.ca/news/canada/toronto/toronto-to-pay-roughly-4-8m-in-rebates-to-political-donors-1.2604276">CBC highlighted</a> the large sums of money flowing into Toronto politics from outside the city limits, noting that Toronto “is one of the few municipalities in the Greater Toronto Area that reimburses political donations to people who don&#39;t live, pay taxes or vote in the city.”</p>
+
+<p>Toronto reimburses up to 75% of financial contributions given to those running for councillor or Mayor and, according to the CBC, paid out roughly $4.8 Million to people who live outside of city limits in 2010.</p>
+
+<p>An average of 22% of contributions to elected councillors came from outside of city limits in 2010. Less than a third of the money given to candidates came from their own constituents.</p>
+
+<p>Doug Ford was elected to represent Ward 2, with only 11% percent of the contributions he received came from people who lived in the that same ward. Nonetheless, eight other councillors were elected with a lower percentage of financial support from within their ward. Denzil Minnan-Wong was elected with 5% of his funds coming from his constituents, slightly more than Ana Bailão, who had only 4% of her contributions come from inside the ward she ran in.</p>
+
+<p>Only four candidates were elected with over 60% of their funds coming from inside their ward, not including Doug Holyday, who did not receive a single donation.</p>
+
+<p>Information about who campaign contributions in the 2014 election will not be released until next spring.</p>
+
+<p>The following chart breaks down of the percentage of campaign contributions received from within the ward a councillor ran in, the rest of the city, or from outside the city.</p>
+
+<p><img src="/public/img/contributions.jpg" /></p>
+
+<p>Note that other councillors also had unknown amounts of contributions, but Mammoliti was the only councillor where the proportion was so significant.</p>
+
+<p><em>Research and reporting by Tim Groves</em></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/10/16/lobbying-activities/">
+        So, what does a lobbyist *actually* do? Here's the answer.
+      </a>
+    </h1>
+
+    <span class="post-date">16 Oct 2014 | <a href="http://everycandidate.org/2014/10/16/lobbying-activities/#disqus_thread">Comments</a></span>
+
+    <p>We recently <a href="http://everycandidate.org/2014/09/26/lobbyist-registry/">published a list of the seven candidates whose names appear on the Toronto Lobbyist Registry</a>. However the post did not include any details on their lobbying activities. We&#39;ve done some digging to provide a bit more information on the activities of these lobbyists:</p>
+
+<ul>
+<li><p><a href="http://everycandidate.org/toronto-city-council/bruce-baker-2398">Bruce Baker</a>, Ward 32 (Listed as &quot;Consultant&quot;)<br />
+Someone with this name registered to lobby councillor Kristyn Wong-Tam on parking related issue on behalf of Empire Restaurant of 50 Cumberland Street unit 17. Registered Dec 13 2010 and closed July 16th 2012.</p></li>
+<li><p><a href="http://everycandidate.org/toronto-city-council/amarjeet-chhabra-2144">Amarjeet Chhabra</a>, Ward 44 (Listed as &quot;In-house&quot;)<br />
+Someone with this name registered to lobby all members of council on the issue of  creating a casino resort in Toronto on behalf of the 10,000 Jobs Now Coalition, &quot;a broad based group of organizations, businesses, and individuals who support creating 10,000 new and unionized jobs by building an integrated resort in Toronto.”  This took place between April 26, 2013 and June 18, 2014.</p></li>
+<li><p><a href="http://everycandidate.org/toronto-city-council/anthony-fernando-1858">Anthony Fernando</a>, Ward 9 (Listed as &quot;Consultant&quot;)<br />
+Someone with this name registered to Lobby several members of council and city staff, on adjustments to the taxicab licensing regime,  on behalf of the iTAXIWORKERS Association. This took place between May 06, 2011 and January 06, 2012</p></li>
+<li><p><a href="http://everycandidate.org/toronto-city-council/john-nunziata-2536">John Nunziata</a>, Ward 12 (Listed as &quot;Consultant&quot;)<br />
+Nunziata made seven lobbying registrations, lobbying numerous members of council and city staff on issues from real estate to the parking authority, taxi licences and efforts to establish a casino. Lobbying took place between 2008 and August 2014.</p></li>
+<li><p><a href="http://everycandidate.org/toronto-city-council/raj-rama-1911">Raj Rama</a>, Ward 28 (Listed as &quot;In-house&quot;)<br />
+“I am a reseller of security and technology/communications solutions, e.g. shotspotter.com, marketo.com, insidesales.com, etc. I also offer consulting services,”  wrote someone with the name Raj Rama in their lobbying registration. He Registered to lobby councillor Norm Kelly, and several members of city staff between December 20th 2012, and the end of 2014.</p></li>
+<li><p><a href="http://everycandidate.org/toronto-city-council/robert-spencer-2097">Robert Spencer</a>, Ward 36 (Listed as &quot;Consultant&quot;)<br />
+Someone with this name lobbied on two matters, first lobbying Sandra Bussin, and a member of city staff for an “endorsement of environmental software program: Green Globes”, between 2008 and 2009; Also a real estate matter lobbying city staff in relation to the “Giles School in Don Mills ... offering access to its community facilities for schools or community centres”, also between 2008 and 2009.</p></li>
+<li><p><a href="http://everycandidate.org/toronto-city-council/john-parker-2228">John Parker</a>, Ward 26
+This does not appear to be the same John Parker as the lobbyist.</p></li>
+</ul>
+
+<p>Does lobbying activity in the past influence your voting-day decisions? Let us know in the comments below.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/10/15/toronto-to-montreal/">
+        The distance from Toronto to Montreal
+      </a>
+    </h1>
+
+    <span class="post-date">15 Oct 2014 | <a href="http://everycandidate.org/2014/10/15/toronto-to-montreal/#disqus_thread">Comments</a></span>
+
+    <p><img src="/public/img/toronto_to_montreal.png" alt="542km, the distrance from the Toronto to Montreal"/><br />
+Yesterday, <a href="/2014/10/14/running-close-to-home/">we published an article examining the high percentage of candidates for city council that live outside the ward they are running in</a>. It is <a href="http://news.nationalpost.com/2010/10/12/peter-kuitenbrouwer-representation-from-the-outside/">not the first article to examine this question</a>. During the 2010 municipal election, <a href="http://news.nationalpost.com/2010/10/12/peter-kuitenbrouwer-representation-from-the-outside/">an article on this same topic</a> was published by the National Post. </p>
+
+<p>In this election, if you add up the distances of candidates for city council who live outside of their ward, the total distance is 542 kilometres, which is roughly the distance between Toronto and Montreal. </p>
+
+<p>We have updated the <a href="http://everycandidate.org/candidates/#toronto-council">profile pages</a> here on Every Candidate so that you can now look up each candidate and see if they live outside the ward and, if so, how far away they live.</p>
+
+<p>Let us know what you think in the comments.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2014/10/14/running-close-to-home/">
+        More than 30% of candidates live outside the ward they are running in
+      </a>
+    </h1>
+
+    <span class="post-date">14 Oct 2014 | <a href="http://everycandidate.org/2014/10/14/running-close-to-home/#disqus_thread">Comments</a></span>
+
+    <p><img src="/public/img/11km_Map.png" alt="11Km, the distrance from the CNE to the 401"/><br />
+<a href="/toronto-city-council/norm-kelly-2039/">Deputy Mayor Norm Kelly</a> is running for re-election in <a href="http://everycandidate.org/toronto-ward/scarborough-agincourt-40/">Ward 40</a>, but lives in a different part of Scarborough, almost 11 kilometres away, the distance between the C.N.E. and Highway 401. However <a href="/toronto-ward/scarborough-agincourt-40/">none of the candidates running against Kelly live in the ward either</a>.</p>
+
+<p>Out of 358 people competing to become city councillors, 135 of them (38%) registered to run for office using addresses that do not fall within the ward they hope to represent, according to data compiled from their nomination papers.</p>
+
+<p>Of the 37 incumbents running for re-election 12 do not live in the ward that they currently represent.</p>
+
+<p>You can now check which candidates <a href="/">live in your ward</a> by simply visiting their profile page here on Every Candidate. Just look for the map marker <i class="fa fa-map-marker"></i>.</p>
+
+<p>“Many people don&#39;t realize that you can run and not live in the ward,” say <a href="http://everycandidate.org/toronto-city-council/mary-margaret-mcmahon-1876/">Mary-Margaret McMahon</a>, who lives within <a href="http://everycandidate.org/toronto-ward/beaches-east-york-32/">Ward 32</a> in the Beaches, the area she represents as a city councillor.</p>
+
+<p>“People are very surprised”, McMahon explained, “they think it is one of the requirements but it is not.”</p>
+
+<p>The rules set out by the province in the City of Toronto Act, do not require a candidate to live within the ward to become a city councillor. They stipulate only that the candidate be eligible to vote in the city, that is someone who either lives in, owns property, or rents property in the Toronto.</p>
+
+<p>“Residents tell me they think their city councillor should live in their ward. They get very upset when candidates are not forthcoming about living outside the ward, even when directly asked” said <a href="http://everycandidate.org/toronto-city-council/mary-fragedakis-1930/">Mary Fragedakis</a>, the councillor running for reelection in <a href="http://everycandidate.org/toronto-ward/toronto-danforth-29/">Ward 29</a>.</p>
+
+<p>“I find even candidates who live a kilometre or so outside seem to not know many things about the ward,” Fragedakis expressed.</p>
+
+<p>However this perspective is contrasted by the wide range of other views held by candidates for city council.</p>
+
+<p>“Residents don&#39;t care where their candidate lives,” said <a href="http://everycandidate.org/toronto-city-council/sarah-thomson-2433/">Sarah Thompson</a>, who resides in Rosedale, but is hoping to move a kilometre and a half west to <a href="http://everycandidate.org/toronto-ward/trinity-spadina-20/">Ward 20</a>, where she is running for council.</p>
+
+<p>She is cynical about the intentions of those raising the question of where a candidate lives. “It is usually raised as a campaign tactic that rarely gets traction.”</p>
+
+<p>Some city councillors see drawbacks to living inside the ward they represent.</p>
+
+<p>“I intentionally divested from the ward” says <a href="http://everycandidate.org/toronto-city-council/kristyn-wong-tam-2010/">Kristyn Wong-Tam</a>, the councillor for downtown&#39;s <a href="http://everycandidate.org/toronto-ward/toronto-centre-rosedale-27/">Ward 27</a>. Wong-Tam once lived in the area as well as owning properties and a business in the ward. Wong-Tam now lives roughly half a kilometre away from the ward.</p>
+
+<p>“If I lived within the ward boundaries, I would often find myself in a situation of living too close to the developments and would be required to declare an interest to avoid conflict,” explained Wong-Tam, who worries she would be “abdicating her responsibility” if she had to assign another councillor to oversee condo developments in her area.</p>
+
+<p>Wong-Tam lives only a few blocks from the ward she represents, but other candidates live a decent commute away. Deputy Mayor Kelly did not respond to a request to comment on this story, but <a href="http://everycandidate.org/toronto-city-council/randy-ai-2342/">Randy Ai</a>, who is running for council further from home explained his motivations.</p>
+
+<p>“I live downtown in a condo, but don&#39;t feel connected to that area”, said Ai. He grew up in North York&#39;s <a href="/toronto-ward/willowdale-24/">Ward 24</a>, where he is a candidate. He doesn&#39;t foresee a problem closing the more than 12 kilometre distance.</p>
+
+<p>“I would be a five-minute walk from city hall, and I would visit the ward as often as possible. It is only a 25-minute drive away, if the DVP is empty,” Ai added.</p>
+
+<p>The candidate who is running the farthest from home is <a href="http://everycandidate.org/toronto-city-council/amarjeet-chhabra-2144/">Amarjeet Chhabra</a>, who lives downtown but is vying for a seat in Scarborough&#39;s <a href="http://everycandidate.org/toronto-ward/scarborough-east-44/">Ward 44</a>, over 19 kilometres away, further than the distance between the lake shore and the northern city limits.</p>
+
+<p>Not all cities in Ontario operate in the same manner as Toronto. The City of Markham, for example, elects not only a mayor and a councillor to represent each of the city&#39;s eight wards, but also elects four regional councillors to serve the city as a whole.</p>
+
+<p>Toronto&#39;s system is based on having representatives for 44 different parts of the city, which can result in some Torontonians feeling their interests are not always reflected by their elected city councillor.</p>
+
+<p>“Our city is notorious for having a council that is poorly representative of the people who live in it,” says candidate <a href="/toronto-city-council/jane-farrow-2166/">Jane Farrow (Ward 30)</a>.</p>
+
+<p>It is not clear that a councillor living within the ward makes them a better representative, but Farrow contends that “residency and ward boundaries seem to be an issue that doesn&#39;t receive enough scrutiny.”</p>
+
+<p><em>Research and reporting by Tim Groves</em></p>
+
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page2">Older</a>
+  
+  
+    <span class="pagination-item newer">Newer</span>
+  
+</div>
+
+
+      </div>
+      <div class="container" id="footer">
+          <p><a href="mailto:everycandidate@gmail.com">Send a tip &bull; <a href="https://twitter.com/EveryCandidate">Every Candidate on Twitter</a> &bull; <a href="http://eepurl.com/3PqEv">Subscribe for updates</a></p>
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="/public/js/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="/public/js/app.js"></script>
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'everycandidate'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55017648-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+      var _sf_async_config = { uid: 5276, domain: 'everycandidate.org', useCanonical: true };
+      (function() {
+        function loadChartbeat() {
+          window._sf_endpt = (new Date()).getTime();
+          var e = document.createElement('script');
+          e.setAttribute('language', 'javascript');
+          e.setAttribute('type', 'text/javascript');
+          e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+          document.body.appendChild(e);
+        };
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+          loadChartbeat : function() { oldonload(); loadChartbeat(); };
+      })();
+    </script>
+    
+  </body>
+</html>
